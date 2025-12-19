@@ -1,0 +1,119 @@
+.our_patner_bg_color_main{
+    background: rgb(241, 241, 241);
+    padding: 0 0 100px;
+}
+
+.our_patner_bg_color_only{
+    background: rgb(241, 241, 241);
+}
+
+.our_patner_bg_color {
+    background: #fff;
+    padding: 30px 0;
+    margin-bottom: 32px;
+}
+
+.our_patner_bg_margin_set {
+    margin-top: 30px;
+}
+
+.technology_partner_hedding h3 {
+    color: #333;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+    margin: 0;
+}
+
+.our_patner_box {
+    padding: 15px 15px 40px;
+    border-radius: 10px;
+    background: #ffffff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.our_patner_box img {
+    mix-blend-mode: multiply;
+    margin-bottom: 15px;
+}
+
+.our_patner_box h2 {
+    color: #282828;
+    text-align: center;
+    font-family: Syne;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+.our_patner_box p {
+   
+    margin: 0;
+    
+}
+
+.Become_Partner_bg {
+    padding: 25px 0;
+    background-color: #000;
+    margin-top: 0;
+}
+
+.Become_Partner_bg-LIGHT {
+    padding: 25px 0;
+    background-color: #DAD6F3;
+    margin-top: 0;
+}
+
+.Become_Partner_bg-LIGHT h2 {
+    color: #1D1D1D;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0;
+    line-height: 160%;
+}
+
+.Become_Partner_bg h2 {
+    color: #FFF;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0;
+    line-height: 160%;
+}
+
+.Become_Partner_margin_setop {
+    margin-bottom: 100px;
+}
+
+
+@media (max-width:991px) {
+    .our_patner_box h2 {
+        font-size: 15px;
+    }
+
+    .our_patner_box p {
+        font-size: 14px;
+        text-align: start;
+    }
+}
+
+@media (max-width:767px) {
+    .only_margin_bottom_set {
+        margin-bottom: 30px;
+    }
+}

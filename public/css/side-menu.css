@@ -1,0 +1,128 @@
+.fw-full-container-top {
+  position: relative;
+  z-index: 1;
+}
+
+.home-Vts {
+  cursor: pointer !important;
+  margin-top: 50px !important;
+  overflow: hidden !important;
+  text-align: center !important;
+  font-size: 2.4rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2000000477 !important;
+  text-transform: uppercase !important;
+  color: #e6edff !important;
+  font-family: Syne, 'Source Sans Pro' !important;
+  white-space: nowrap !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.5s ease !important;
+}
+
+.home-Vts-LIGHT {
+  cursor: pointer;
+  margin-top: 50px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2000000477;
+  text-transform: uppercase;
+  color: #000000;
+  font-family: Syne, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.home-Vts-LIGHT:hover {
+  transform: scale(3);
+  /* Increase font size on hover */
+}
+
+.home-Vts-LIGHT:not(:hover) {
+  transform: scale(1);
+  /* Return to original size */
+}
+
+.home-Vts:hover {
+  transform: scale(3);
+  /* Increase font size on hover */
+}
+
+.home-Vts:not(:hover) {
+  transform: scale(1);
+  /* Return to original size */
+}
+
+
+.home-Vts a {
+  color: #e6edff;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .home-Vts {
+    font-size: 1.4rem;
+  }
+ 
+
+  .fw-menus {
+    margin-top: 100px;
+  }
+
+  .home-Vts-LIGHT
+  {
+    font-size: 1.4rem;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  .fw-menus {
+    margin-top: 150px;
+  }
+}
+
+
+
+
+.group-3-yi {
+  width: 18.2rem;
+  height: 5.5rem;
+
+
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+
+.group-2-6o {
+  margin: 0rem 0.211rem 0.383rem 0rem;
+  width: 18.2rem;
+  height: 5.5rem;
+
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+
+
+.frame-68-eH {
+  box-sizing: border-box;
+  padding: 1.6rem 3.3rem 0.6rem 1.2rem;
+  width: 10rem;
+  height: 3.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: rgba(76, 88, 116, 0.200000003);
+  border-radius: 6rem;
+  margin-top: 15px;
+}

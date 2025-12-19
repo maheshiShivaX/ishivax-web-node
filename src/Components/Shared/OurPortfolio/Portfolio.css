@@ -1,0 +1,237 @@
+.Portfolio_New_Page_wepper {
+    background: #F1F1F1;
+    padding: 100px 0 20px;
+    text-align: start;
+}
+
+/* .portflio_line_line_weepper{
+    padding: 0 20px;
+} */
+
+/* .hedding_Portfolio_New h2 {
+    color: #050610;
+    font-family: Manrope;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: -0.36px;
+} */
+
+/* .hedding_Portfolio_New p {
+    color: #535353;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+} */
+
+.Portfolio_New_Page_wepper .nav-tabs .nav-link {
+    display: flex;
+    height: 32px;
+    padding: 7px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 27px;
+    background: #D9D9D9;
+    color: #050610;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}
+
+.Portfolio_New_Page_wepper .nav-tabs .nav-link.active {
+    display: flex;
+    height: 32px;
+    padding: 7px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 27px;
+    background: #D9D9D9;
+    color: #050610;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}
+
+/* .Portfolio_New_Page_wepper .nav-tabs .nav-link.active::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #050610;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.Portfolio_New_Page_wepper .nav-tabs {
+    border: unset;
+}
+
+.Portfolio_New_Page_wepper .nav-tabs .nav-link {
+    border: unset;
+}
+
+.Portfolio_New_Page_wepper .nav-tabs .nav-link:hover  {
+    isolation: isolate;
+    border-color: unset;
+    border: unset;
+}
+
+.Portfolio_New_Page_wepper .active {
+    font-weight: normal;
+}
+
+.Portfolio_New_Page_wepper .nav {
+    gap: 20px;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.Portfolio_New_Page_wepper .nav-tabs .nav-link {
+    color: #050610;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}
+
+.Portfolio_New_Page_wepper .tab-content {
+    margin-top: 60px;
+}
+
+/* .portfolio_inner_hedding h3 {
+    color: #050610;
+    font-family: Manrope;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+} */
+
+.portfolio_inner_hedding span {
+    color: #535353;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.portfolio_inner_hedding p {
+    margin-bottom: 10px;
+}
+
+.portfolio_inner_image_data {
+    text-align: right;
+}
+
+.left_img {
+    text-align: start;
+}
+
+.portfolio_inner_image_data img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.portfolio_inner_content::-webkit-scrollbar {
+    width: 2px;
+    background-color: #f1f1f1;
+}
+
+.portfolio_inner_content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+
+}
+
+.portflio_line_line {
+    margin-top: 100px;
+    position: absolute;
+    z-index: 1;
+    bottom: -115px;
+    width: 100%;
+}
+
+.portfolio_inner_content {
+    overflow-y: scroll;
+    height: 500px;
+}
+
+.row_spaceing {
+    margin-top: 40px;
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+    .Portfolio_New_Page_wepper .nav {
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    .Portfolio_New_Page_wepper .nav-tabs .nav-link {
+        padding: 0;
+    }
+
+    .portfolio_inner_content {
+        overflow-y: scroll;
+        height: 400px;
+    }
+}
+
+@media (max-width:991px) {
+    .Portfolio_New_Page_wepper .nav {
+        gap: 17px;
+    }
+
+    /* .hedding_Portfolio_New h2 {
+        font-size: 25px;
+    } */
+
+    .portfolio_inner_content {
+        overflow-y: scroll;
+        height: 300px;
+    }
+
+}
+
+@media (max-width:576px) {
+    .Portfolio_New_Page_wepper {
+        padding: 50px 0 20px;
+    }
+
+
+    .portflio_line_line {
+        margin-top: 44px;
+    }
+
+    .portfolio_inner_image_data {
+        text-align: center;
+    }
+
+    .Portfolio_New_Page_wepper .nav {
+        gap: 17px;
+        justify-content: center;
+    }
+
+    .Portfolio_New_Page_wepper .nav-tabs .nav-link {
+        padding: 0;
+    }
+
+    .row_spaceing {
+        flex-direction: column-reverse;
+    }
+}

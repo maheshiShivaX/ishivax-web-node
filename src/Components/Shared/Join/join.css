@@ -1,0 +1,191 @@
+.join_wepper {
+    padding: 100px;
+    padding-bottom: 100px;
+    background: rgb(241, 241, 241);
+}
+
+.join_heding_content {
+    text-align: start;
+}
+
+.join_heding_content h2 {
+    color: #2E2E2E;
+    font-family: Syne;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.join_heding_content p {
+    margin-bottom: 40px;
+}
+
+.join_wepper .fw-row button {
+    background-color: transparent;
+    margin: auto;
+}
+
+.join_heding_content button {
+    margin: 0 !important;
+}
+
+.join_wepper .fw-row button:hover {
+    background-color: #2E2E2E;
+}
+
+.our_tems_data_img img {
+    width: 60%;
+}
+
+.our_join_row {
+    margin-top: 80px;
+}
+
+.our_join_row .our_tems_data_img {
+    text-align: start;
+}
+
+.row_set {
+    margin-top: 80px;
+}
+
+.join_form_wepper {
+    border-radius: 35px;
+    /* background: #ffffff; */
+    padding: 35px;
+    margin-top: 80px;
+}
+
+
+.join_form_wepper h2 {
+    color: #2E2E2E;
+    text-align: center;
+    font-family: Syne;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+
+.join_input input {
+    padding: 15.545px 29.894px;
+    border-radius: 50px;
+    /* border: 1.196px solid #3A3A3A; */
+    background-color: #fff;
+    color: rgba(5, 6, 16, 1);
+    font-family: Manrope;
+    font-size: 15.132px;
+    font-style: normal;
+
+    line-height: 160%;
+}
+
+.form-control:focus {
+    box-shadow: unset;
+    border-color: #313131;
+    background-color: #fff;
+}
+
+.join_input select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='10' viewBox='0 0 17 10' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.6619 2.04103L9.31619 9.64981C8.86542 10.1167 8.13458 10.1167 7.68381 9.64981L0.338078 2.04103C-0.112692 1.57411 -0.112692 0.817099 0.338078 0.350186C0.788849 -0.116727 1.51969 -0.116727 1.97046 0.350186L8.5 7.11355L15.0295 0.350185C15.4803 -0.116728 16.2112 -0.116728 16.6619 0.350185C17.1127 0.817098 17.1127 1.57411 16.6619 2.04103Z' fill='black'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 13px;
+    padding: 15.545px 29.894px;
+    border-radius: 50px !important;
+    /* border: 1.196px solid #3A3A3A; */
+    background-color: #fff;
+    color: #313131;
+    font-family: Manrope;
+    font-size: 15.132px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+/* Optional: Add hover or focus styles */
+.join_input select:hover,
+.join_input select:focus {
+    border-color: #313131;
+    background-color: #fff;
+    /* Change border color on hover or focus */
+}
+
+.join_input .file-upload {
+    margin-top: 30px;
+}
+
+@media (max-width:991px) {
+    .join_heding_content h2 {
+        font-size: 19px;
+    }
+
+    .our_tems_data_img img {
+        width: 100%;
+    }
+}
+
+@media (max-width:576px) {
+    .our_tems_data_img img {
+        width: 70%;
+    }
+
+    .row_flex_first,
+    .row_set {
+        flex-direction: column-reverse;
+    }
+
+    .join_heding_content h2 {
+        margin-top: 25px;
+    }
+
+    .our_join_row {
+        margin-top: 34px;
+    }
+
+    .our_join_row .our_tems_data_img {
+        text-align: center;
+    }
+
+    .footer_dmca {
+        width: 120px;
+    }
+
+    .join_form_wepper h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .join_form_wepper {
+        padding: 35px 0;
+        margin: 0;
+    }
+
+    .join_heding_content h2 {
+        font-size: 13px;
+    }
+
+    .join_wepper {
+        padding: 10px;
+        padding-bottom: 10px;
+    }
+
+    .join_heding_content h2 {
+        margin-bottom: 10px;
+    }
+    .join_form_wepper form{
+        padding: 0;
+    }
+
+}

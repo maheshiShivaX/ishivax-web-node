@@ -1,0 +1,438 @@
+.ourproducts_tabs .nav-tabs {
+    border: unset;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.nav-tabs .nav-link {
+    border: unset;
+    color: #333;
+    font-family: Syne;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    padding: 0 15px;
+}
+
+.nav-tabs .nav-link:focus-visible {
+    outline: 0;
+    box-shadow: unset;
+}
+
+.nav-tabs .nav-link.active {
+    border: unset;
+    color: #000;
+    font-family: Syne;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+.our_product_wepper_main {
+    margin-top: 88px;
+}
+
+/* .bg_color_our_product_weeper {
+    height: 520px;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    background: url(../../../../public/images/life-code-banner.png) #A80C23 50% / cover no-repeat;
+} */
+.bg_color_our_product_weeper img {
+    border-radius: 50px;
+}
+
+.bg_color_our_product_weeper .row {
+
+    padding: 20px 80px 0;
+}
+
+.our_product_hedding {
+    text-align: start;
+}
+
+.our_product_hedding h2 {
+    color: #282828;
+    font-family: Syne;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+.our_product_hedding a {
+    color: #282828;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.our_star_wepper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.our_star_wepper img {
+    width: 15px;
+}
+
+.our_star_wepper span {
+    color: #282828;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin-left: 10px;
+}
+
+.our_product_hedding p {
+    color: #282828;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 149%;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.play_store_wepper {
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+    gap: 10px;
+}
+
+.left_side_images {
+    text-align: start;
+}
+
+.right_side_images img {
+    width: 80%;
+}
+
+.our_product_wepper_bottom {
+    margin-bottom: 50px;
+}
+
+/* New Design  */
+
+.tab_our_product_wepper {
+    /* background-color: #A80C23; */
+    background-image: url(../../../../public/images/our-bg.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    height: auto;
+    padding: 100px 0;
+}
+
+.tab_our_product_wepper .tab {
+    position: relative;
+}
+
+.tab_our_product_wepper .tab::before,
+.tab_our_product_wepper .tab::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+/* Active tab styles */
+.tab_our_product_wepper .tab.active::before {
+    width: 10px;
+    border-left: 7px solid white;
+    border-radius: 25px;
+    margin: -2px;
+}
+
+.tab_our_product_wepper .tab.active::after {
+    width: 3px;
+    border-left: 3px solid white;
+    border-radius: 25px;
+}
+
+/* Inactive tab styles */
+.tab_our_product_wepper .tab:not(.active)::before {
+    width: 3px;
+    border-left: 3px solid white;
+}
+
+.tab_our_product_wepper .tab:not(.active)::after {
+    width: 3px;
+    border-left: 3px solid white;
+}
+
+.tab_our_product_wepper .coustom_tab_menu_left.active p {
+    color: #E7EEFF;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: start;
+}
+
+.tab_our_product_wepper .coustom_tab_menu_left p {
+    color: #E7EEFF;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: start;
+    text-transform: uppercase;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.left_side_content {
+    text-align: start;
+}
+
+.left_side_content h2 {
+    color: #E7EEFF;
+    font-family: Syne;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+.left_side_content a {
+    color: #E7EEFF !important;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.left_side_content .visit_website_btn{
+    color: #E7EEFF !important;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 116%;
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #32363c;
+    width: 91px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.left_side_content .visit_website_btn:hover {
+    /* color: #000000 !important; */
+    text-decoration: underline !important;
+}
+
+.star_werp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.star_werp svg {
+    width: 15px;
+    height: 15px;
+}
+
+.star_werp p {
+    margin: 0;
+    color: #E7EEFF;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+
+}
+
+.description_content p {
+    color: #E7EEFF;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+.view_btn_werp {
+    margin-top: 25px;
+}
+
+.view_btn_werp {
+    border-radius: 10px;
+    opacity: 0.8;
+    background: #D9D9D9;
+    box-shadow: 5px 6px 5px 0px rgba(0, 0, 0, 0.25);
+    width: 260px;
+    height: 61px;
+    text-align: center;
+
+
+}
+
+.view_btn_werp a {
+    color: #1A1A1A !important;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+
+.view_btn_werp a:hover {
+    color: #A80C23 !important;
+}
+
+/* .right_mobile_shap img {
+    width: 70%;
+} */
+
+/* New Design End */
+
+
+@media (max-width:767px) {
+    .nav-tabs .nav-link {
+        padding: 0 15px 15px 0px;
+    }
+
+    .play_store_wepper img {
+        width: 100px;
+    }
+
+
+
+}
+
+@media (max-width:575px) {
+    .row_flex_only {
+        flex-direction: column-reverse;
+    }
+
+    .nav-tabs .nav-link.active {
+        font-size: 16px;
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 16px;
+    }
+
+    .our_product_wepper_main {
+        margin-top: 40px;
+    }
+
+    .bg_color_our_product_weeper img {
+        border-radius: 10px;
+    }
+
+    .our_product_hedding h2 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .our_product_hedding a {
+        font-size: 16px;
+    }
+
+    .right_side_images img {
+        width: 100%;
+    }
+
+    .ourproducts_tabs .nav-tabs {
+        padding: 30px 0;
+    }
+
+    .tab_our_product_wepper .row {
+        padding: 0px 0px 0px 40px;
+        width: 100%;
+    }
+
+    .coustom_tab_menu {
+        display: block;
+        column-count: 3;
+    }
+
+    .tab_our_product_wepper .tab:not(.active)::after {
+        border: unset;
+        width: unset;
+    }
+
+    .tab_our_product_wepper .tab:not(.active)::before {
+        border: unset;
+        width: unset;
+    }
+
+    .tab_our_product_wepper .tab.active::after {
+        width: unset;
+        border: unset;
+    }
+
+    .tab_our_product_wepper .tab.active::before {
+        width: unset;
+        border: unset;
+    }
+
+    .tab_our_product_wepper .coustom_tab_menu_left p {
+        margin-left: 0;
+    }
+
+    .left_side_content {
+        margin-top: 30px;
+    }
+
+    .tab_our_product_wepper .coustom_tab_menu_left.active p {
+        font-size: 20px;
+    }
+
+    .right_mobile_shap {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width:440px) {
+    .tab_our_product_wepper .coustom_tab_menu_left.active p {
+        font-size: 15px;
+    }
+
+    .tab_our_product_wepper .coustom_tab_menu_left p {
+        font-size: 15px;
+        margin-bottom: 10PX;
+    }
+
+    .tab_our_product_wepper .row {
+        padding: 0px 0px 0px 15px;
+    }
+
+    .coustom_tab_menu {
+        column-count: 2;
+    }
+}

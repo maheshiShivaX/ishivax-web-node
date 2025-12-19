@@ -1,0 +1,79 @@
+/* GLOBAL FIX — White screen कभी नहीं आएगी */
+/* html, body {
+    background: #000 !important;
+    margin: 0;
+    padding: 0;
+} */
+
+/* Loader Wrapper */
+.loader-wrapper {
+    position: fixed;
+    inset: 0;
+    background: rgb(38, 38, 38);;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Loader exit animation */
+.loader-zoom-out {
+    animation: loaderExit 1.2s ease forwards;
+}
+
+@keyframes loaderExit {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.92) translateY(-20px);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(0.8) translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo img {
+    margin-bottom: 30px;
+}
+
+.loader-bar {
+    width: 260px;
+    height: 4px;
+    background: #222;
+    margin: 0 auto;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.loader-bar-fill {
+    height: 4px;
+    background: #ffffff;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+/* HOME PAGE ANIMATION */
+.home-wrapper {
+    /* background: #000 !important;  */
+    min-height: 100vh;
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.home-wrapper.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
