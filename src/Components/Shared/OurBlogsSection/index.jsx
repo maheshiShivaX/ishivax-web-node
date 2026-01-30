@@ -154,7 +154,7 @@ const OurBlogsSection = () => {
                 <div className="client-track" id="clientTrack">
                     {/* <img src="./images/Anutechlogo.png" className="client-logo" alt="" /> */}
                     {/* <img src="./images/RHB.png" className="client-logo" alt="" /> */}
-                    <img src="./images/SuperSinger+.png" className="client-logo" alt="" />
+                    <img src="./images/SuperSinger+.webp" className="client-logo" alt="" />
                     {/* <img src="./images/Aagaman.png" className="client-logo" alt="" /> */}
                     {/* <img src="./images/1st India.png" className="client-logo" alt="" /> */}
                     {/* <img src="./images/DARA Thermoplast.png" className="client-logo" alt="" /> */}

@@ -1,6 +1,25 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ThemeContext } from "../../Contaxt/ThemeContext";
+
+const SCROLL_ROUTES = [
+    "/aboutus", "/services", "/portfolio", "/contact-us",
+    "/service-mobile-app", "/jointeam", "/blog",
+    "/privacy-policy", "/terms-conditions",
+    "/product-portfolio", "/join-our-team",
+    "/our-partner", "/our-products",
+    "/Quote", "/digital-marketing", "/iot-solution",
+];
+
+const HEADER_MENUS = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/aboutus" },
+    { name: "Services", path: "/services" },
+    { name: "Portfolio", path: "/portfolio" },
+    { name: "Our Products", path: "/our-products" },
+    { name: "Blogs", path: "/blog" },
+    { name: "Contact Us", path: "/contact-us" },
+];
 
 const Header = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -8,60 +27,40 @@ const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const { changeTheme, isLight } = useContext(ThemeContext);
 
-    const togglePopup = () => {
+    const { pathname } = useLocation();
+
+    /* ================= Scroll to Top ================= */
+    useEffect(() => {
+        if (SCROLL_ROUTES.includes(pathname)) {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    }, [pathname]);
+
+    /* ================= Header Scroll ================= */
+    useEffect(() => {
+        const handleScroll = () => setIsScrolled(window.scrollY > 20);
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    /* ================= Body Scroll Lock ================= */
+    useEffect(() => {
+        document.body.style.overflow = isPopupOpen ? "hidden" : "";
+        return () => (document.body.style.overflow = "");
+    }, [isPopupOpen]);
+
+    /* ================= Toggle Popup ================= */
+    const togglePopup = useCallback(() => {
         if (isPopupOpen) {
             setIsAnimating(true);
             setTimeout(() => {
                 setIsAnimating(false);
                 setIsPopupOpen(false);
-            }, 300); // Animation duration in milliseconds
+            }, 300);
         } else {
             setIsPopupOpen(true);
         }
-    };
-
-    const { pathname } = useLocation();
-
-    useEffect(() => {
-        const routesToScrollTop = [
-            "/aboutus",
-            "/services",
-            "/portfolio",
-            "/contact-us",
-            "/service-mobile-app",
-            "/jointeam",
-            "/blog",
-            "/privacy-policy",
-            "/terms-conditions",
-            "/product-portfolio",
-            "/join-our-team",
-            "/our-partner",
-            "/our-products",
-            "/Quote",
-            "/digital-marketing",
-            "/iot-solution",
-        ];
-
-        if (routesToScrollTop.includes(pathname)) {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-    }, [pathname]);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 20) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+    }, [isPopupOpen]);
 
     return (
         <div>
@@ -72,7 +71,7 @@ const Header = () => {
                             <div className="menu-box-nav flw">
                                 <div className="menu-box-left">
                                     <div className="logo lg-top">
-                                        <Link to="https://smartqr.ishivax.com/twjacn" target="_blank" rel="noreferrer" >
+                                        <Link to="https://smartqr.ishivax.com/twjacn" target="_blank" rel="noreferrer" aria-label="Ask Nova">
                                             <div className='nova_logo_weper'>
                                                 <span className="novaHover_only">
                                                     Ask <img src="/images/novaLogo.png" className="nova_logo" alt="" />
@@ -89,7 +88,8 @@ const Header = () => {
                                                             : "/images/ishivaxlogo.png"
                                                     }
                                                     className="group-2-6oR"
-                                                    alt="Logo"
+                                                    alt="Ishivax Technologies Logo"
+                                                    loading="eager"
                                                 />
                                             </div>
                                         </Link>
@@ -109,12 +109,12 @@ const Header = () => {
                                         ) : (
                                             <div className=" header_theme_menu">
                                                 {isLight ? (
-                                                    <button className="theme_buttons_light" onClick={changeTheme}>
-                                                        <img src="/images/lightbtn.png" alt="" style={{ width: '20px' }} />
+                                                    <button className="theme_buttons_light" onClick={changeTheme} aria-label="Toggle Theme">
+                                                        <img src="/images/lightbtn.png" alt="Theme Toggle" style={{ width: '20px' }} />
                                                     </button>
                                                 ) : (
                                                     <button className="theme_buttons_dark" onClick={changeTheme}>
-                                                        <img src="/images/darkbtn.png" alt="" style={{ width: '20px' }} />
+                                                        <img src="/images/darkbtn.png" alt="Theme Toggle" style={{ width: '20px' }} />
                                                     </button>
                                                 )}
                                                 <p className="mb-0" onClick={togglePopup}>
@@ -139,93 +139,74 @@ const Header = () => {
                         <div className="fw-page-builder-content">
                             <div className={`fw-main-row ${isLight ? 'black-bg-content-LIGHT' : 'black-bg-content'}`}>
                                 <div className="fw-full-container-top" style={{ backgroundImage: 'url(/images/bg-dots.png)' }}>
+
                                     <div className="fw-container">
+                                        <div className="d-flex justify-content-between align-items-center banner-seo-media-images">
+                                            <div className='seo-media-images-common'>
+                                                <img className="top-image-arrow-1" src="/images/Vector-line-straight.png" alt='' />
+                                                <img className="top-image-arrow-2" src="/images/Vector-line-straight.png" alt='' />
+                                            </div>
 
-                                        <div className="seo-media-images">
-                                            <img className="top-image-arrow-1" src="/images/Vector-line-straight.png" alt="" />
-                                        </div>
-                                        <div className="seo-media-images">
-                                            <img className="top-image-arrow-2" src="/images/Vector-line-straight.png" alt="" />
-                                        </div>
-
-                                        <div className="seo-media-images">
-                                            <img className="top-image-arrow-3" src="/images/Vector-line-straight.png" alt="" />
-                                        </div>
-                                        <div className="seo-media-images">
-                                            <img className="top-image-arrow-4" src="/images/Vector-line-straight.png" alt="" />
+                                            <div className='seo-media-images-common'>
+                                                <img className="top-image-arrow-3" src="/images/Vector-line-straight.png" alt='' />
+                                                <img className="top-image-arrow-4" src="/images/Vector-line-straight.png" alt='' />
+                                            </div>
                                         </div>
 
-                                    </div>
-                                    <div className="content-under-image">
+                                        <div className="content-under-image header-popup-menus">
+                                            <div className="fw-row ">
+                                                <img className="vector-line-1" src="/images/Vector-upper-arrow.png" alt="" />
+                                            </div>
 
-                                        <div className="fw-row ">
-                                            <img className="vector-line-1" src="/images/Vector-upper-arrow.png" alt="" />
-                                        </div>
-
-                                        <div className="fw-row">
-                                            <div className="fw-container ">
-                                                <div className="fw-col-md-4 vector-class">
-                                                    <div className="dot-1"></div>
-                                                    <div className="dot-2"></div>
-                                                    <img className="vector-cross-1" src="/images/vector.png" alt="" />
-                                                    <div className="dot-3"></div>
-                                                    <div className="dot-4"></div>
-                                                </div>
-
-                                                <div className="fw-col-md-4">
-                                                    <div className="fw-menus fw-heading-h2">
-                                                        <h2 className={`${isLight ? 'fw-special-title vector-heading-LIGHT' : 'fw-special-title vector-heading'}`} >MENUS
-                                                        </h2>
+                                            <div className='top-vector_main'>
+                                                <img className="vector-line-common" src="/images/Vector-upper-arrow.png" alt='' />
+                                                <div className="fw-row">
+                                                    <div className="cector-cross-line-allign">
+                                                        <div className="vector-class-common">
+                                                            <div className='dots-first'>
+                                                                <div className="dot-common"></div>
+                                                                <div className="dot-common"></div>
+                                                            </div>
+                                                            <img className="vector-cross-common" src="/images/vector.png" alt='' />
+                                                            <div className='dots-second'>
+                                                                <div className="dot-common"></div>
+                                                                <div className="dot-common"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="fw-heading fw-heading-h2 d-flex justify-content-center align-items-center">
+                                                            <h2 className={`${isLight ? 'fw-special-title vector-heading-LIGHT' : 'fw-special-title vector-heading'}`} >MENUS</h2>
+                                                        </div>
+                                                        <div className="vector-class-common">
+                                                            <div className='dots-first'>
+                                                                <div className="dot-common"></div>
+                                                                <div className="dot-common"></div>
+                                                            </div>
+                                                            <img className="vector-cross-common" src="/images/vector.png" alt='' />
+                                                            <div className='dots-second'>
+                                                                <div className="dot-common"></div>
+                                                                <div className="dot-common"></div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div className="fw-col-md-4  vector-class">
-                                                    <div className="dot-5"></div>
-                                                    <img className="vector-cross-2" src="/images/vector.png" alt="" />
-                                                    <div className="dot-7"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="fw-container scroll_product_content">
-                                            <div className="fw-row">
-                                                <div className="fw-col-xs-12 ">
-                                                    <div className={`${isLight ? 'home-Vts-LIGHT' : 'home-Vts'}`}><Link to='/'>Home</Link></div>
-                                                </div>
-                                            </div>
-                                            <div className="fw-row">
-                                                <div className="fw-col-xs-12 ">
-                                                    <div className={`${isLight ? 'home-Vts-LIGHT' : 'home-Vts'}`}><Link to='/aboutus'>About Us</Link></div>
-                                                </div>
-                                            </div>
-                                            <div className="fw-row">
-                                                <div className="fw-col-xs-12 ">
-                                                    <div className={`${isLight ? 'home-Vts-LIGHT' : 'home-Vts'}`}><Link to='/services'>Services</Link></div>
-                                                </div>
-                                            </div>
-                                            <div className="fw-row">
-                                                <div className="fw-col-xs-12 ">
-                                                    <div className={`${isLight ? 'home-Vts-LIGHT' : 'home-Vts'}`}><Link to="/portfolio">Portfolio</Link></div>
-                                                </div>
-                                            </div>
-                                            <div className="fw-row">
-                                                <div className="fw-col-xs-12 ">
-                                                    <div className={`${isLight ? 'home-Vts-LIGHT' : 'home-Vts'}`}><Link to="/our-products">Our Products</Link></div>
-                                                </div>
+                                                <img className="vector-line-common1" src="/images/Vector-upper-arrow.png" alt='' />
                                             </div>
 
-                                            <div className="fw-row">
-                                                <div className="fw-col-xs-12 ">
-                                                    <div className={`${isLight ? 'home-Vts-LIGHT' : 'home-Vts'}`}><Link to="/blog">Blogs</Link></div>
-                                                </div>
+                                            <div className="fw-container scroll_product_content">
+                                                {HEADER_MENUS.map((menu) => (
+                                                    <div className="fw-row" key={menu.path}>
+                                                        <div className="fw-col-xs-12 ">
+                                                            <div className={`${isLight ? 'home-Vts-LIGHT' : 'home-Vts'}`}>
+                                                                <Link to={menu.path}>{menu.name}</Link>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                ))}
                                             </div>
                                             <div className="fw-row">
                                                 <div className="fw-col-xs-12 ">
-                                                    <div className={`${isLight ? 'home-Vts-LIGHT' : 'home-Vts'}`}><Link to="/contact-us">Contact Us</Link></div>
+                                                    <div className="fw-divider-space" style={{ marginTop: '250px' }}></div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div className="fw-row">
-                                            <div className="fw-col-xs-12 ">
-                                                <div className="fw-divider-space" style={{ marginTop: '250px' }}></div>
                                             </div>
                                         </div>
                                     </div>

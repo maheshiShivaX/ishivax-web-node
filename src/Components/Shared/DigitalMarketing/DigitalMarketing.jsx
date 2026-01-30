@@ -47,7 +47,7 @@ const DigitalMarketing = () => {
                                 </div>
                             </div>
                             <div className="fw-col-xs-12 fw-col-sm-6 fw-col-md-6  ">
-                                <div className="seo-media-images">
+                                <div className="">
                                     <img src="/images/mobile-services-main.webp" alt="" />
                                 </div>
                             </div>

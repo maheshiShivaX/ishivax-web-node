@@ -4,97 +4,96 @@ import Header from "../Header";
 import { ThemeContext } from "../../../Contaxt/ThemeContext";
 
 const PrivacyPolicyPage = () => {
- const { isLight } = useContext(ThemeContext);
+    const { isLight } = useContext(ThemeContext);
 
     return (
         <div>
             <Header />
             <section>
                 <div className={`fw-main-row ${isLight ? 'black-bg-content-LIGHT' : 'black-bg-content'}`}>
-                    <div className="fw-full-container-top" style={{ backgroundImage: 'url(./images/bg-dots.png)',overflow:"hidden" }}>
-                        <div className="fw-row">
-                            <div className="fw-col-xs-12 ">
-                                <div className="fw-divider-space" style={{ marginTop: '40px' }}></div>
-                            </div>
-                        </div>
-                        <div className="fw-container">
-
-                            <div className="seo-media-images privacy_top_images_arrow">
-                                <img className="top-image-arrow-1" src="./images/Vector-line-straight.png" alt="" />
-                            </div>
-                            <div className="seo-media-images privacy_top_images_arrow">
-                                <img className="top-image-arrow-2" src="./images/Vector-line-straight.png" alt="" />
-                            </div>
-
-                            <div className="seo-media-images privacy_top_images_arrow">
-                                <img className="top-image-arrow-3" src="./images/Vector-line-straight.png" alt="" />
-                            </div>
-                            <div className="seo-media-images privacy_top_images_arrow">
-                                <img className="top-image-arrow-4" src="./images/Vector-line-straight.png" alt="" />
-                            </div>
-
-                        </div>
-                        <div className="content-under-image pb-4">
-
-                            <div className="fw-row ">
-                                <img className="vector-line-1" src="./images/Vector-upper-arrow.png" alt="" />
-                            </div>
-
+                    <div className="fw-full-container-top" style={{ backgroundImage: 'url(./images/bg-dots.png)', overflow: "hidden" }}>
+                        <div className='fw-container'>
                             <div className="fw-row">
-                                <div className="fw-container ">
-                                    <div className="fw-col-md-4 vector-class">
-                                        <div className="dot-1"></div>
-                                        <div className="dot-2"></div>
-                                        <img className="vector-cross-1" src="./images/vector.png" alt="" />
-                                        <div className="dot-3"></div>
-                                        <div className="dot-4"></div>
-                                    </div>
+                                <div className="fw-col-xs-12 ">
+                                    <div className="fw-divider-space"></div>
+                                </div>
+                            </div>
 
-                                    <div className="fw-col-md-4">
-                                        <div className="fw-heading fw-heading-h2">
-                                            <h2 className={`${isLight ? 'fw-special-title vector-heading-LIGHT' : 'fw-special-title vector-heading'}`}>Privacy Policy
-                                            </h2>
+                            <div className="d-flex justify-content-between align-items-center banner-seo-media-images">
+                                <div className='seo-media-images-common'>
+                                    <img className="top-image-arrow-1" src="/images/Vector-line-straight.png" alt='' />
+                                    <img className="top-image-arrow-2" src="/images/Vector-line-straight.png" alt='' />
+                                </div>
+
+                                <div className='seo-media-images-common'>
+                                    <img className="top-image-arrow-3" src="/images/Vector-line-straight.png" alt='' />
+                                    <img className="top-image-arrow-4" src="/images/Vector-line-straight.png" alt='' />
+                                </div>
+                            </div>
+
+                            <div className="content-under-image pb-4">
+                                <div className='top-vector_main'>
+                                    <img className="vector-line-common" src="/images/Vector-upper-arrow.png" alt='' />
+                                    <div className="fw-row">
+                                        <div className="cector-cross-line-allign">
+                                            <div className="vector-class-common">
+                                                <div className='dots-first'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                                <img className="vector-cross-common" src="/images/vector.png" alt='' />
+                                                <div className='dots-second'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                            </div>
+                                            <div className="fw-heading fw-heading-h2 d-flex justify-content-center align-items-center">
+                                                <h2 className={`${isLight ? 'fw-special-title vector-heading-LIGHT' : 'fw-special-title vector-heading'}`}>Privacy Policy</h2>
+                                            </div>
+                                            <div className="vector-class-common">
+                                                <div className='dots-first'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                                <img className="vector-cross-common" src="/images/vector.png" alt='' />
+                                                <div className='dots-second'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="fw-col-md-4  vector-class">
-                                        <div className="dot-5"></div>
-                                        <div className="dot-6"></div>
-                                        <img className="vector-cross-2" src="./images/vector.png" alt="" />
-                                        <div className="dot-7"></div>
-                                        <div className="dot-8"></div>
+                                    <img className="vector-line-common1" src="/images/Vector-upper-arrow.png" alt='' />
+                                </div>
+
+                                <div className="fw-row">
+                                    <div className="fw-col-xs-12 ">
+                                        <div className="fw-divider-space" style={{ marginTop: '20px' }}></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="fw-row ">
-                                <img className="vector-line-2" src="./images/Vector-upper-arrow.png" alt="" />
-                            </div>
-                            <div className="fw-row">
-                                <div className="fw-col-xs-12 ">
-                                    <div className="fw-divider-space" style={{ marginTop: '20px' }}></div>
+                                <div className="fw-row">
+                                    <div className="container">
+                                        <div className="fw-col-xs-12 ">
+
+                                        </div>
+                                        <div className="fw-col-xs-12 ">
+                                            <p className={`${isLight ? 'heading-common-main-LIGHT' : 'heading-common-main'}`}>iShivax Privacy Policy</p>
+                                            <p className={`${isLight ? 'heading-common-content-LIGHT' : 'heading-common-content'}`}>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You. We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Generator.
+                                            </p>
+                                        </div>
+                                        <div className="fw-col-xs-12 ">
+
+                                        </div>
+                                    </div>
+
                                 </div>
-                            </div>
-                            <div className="fw-row">
-                                <div className="container">
+
+                                <div className="fw-row" style={{ display: 'flex' }}>
                                     <div className="fw-col-xs-12 ">
 
                                     </div>
                                     <div className="fw-col-xs-12 ">
-                                        <p className={`${isLight ? 'heading-common-main-LIGHT' : 'heading-common-main'}`}>iShivax Privacy Policy</p>
-                                        <p className={`${isLight ? 'heading-common-content-LIGHT' : 'heading-common-content'}`}>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You. We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Generator.
-                                        </p>
                                     </div>
-                                    <div className="fw-col-xs-12 ">
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div className="fw-row" style={{ display: 'flex' }}>
-                                <div className="fw-col-xs-12 ">
-
-                                </div>
-                                <div className="fw-col-xs-12 ">
                                 </div>
                             </div>
                         </div>

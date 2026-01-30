@@ -40,7 +40,7 @@ const CollaborateWith = () => {
     }, []);
 
     return (
-        <div className="fw-main-row">
+        <div className="fw-main-row pt-4 pb-5" style={{backgroundColor:"#ffffff"}}>
             <MyTextPrinting collaborateData={collaborateData} />
             <div className="fw-container">
                 <div className="fw-row">
@@ -52,10 +52,10 @@ const CollaborateWith = () => {
                             <span style={{ color: 'color:rgba(83, 83, 83, 1)' }}>We are passionate investors in
                                 great ideas</span>
                             <span style={{ color: 'color:rgba(83, 83, 83, 1)' }}>
-                                <img src="/images/threed_image_one.png" alt="texture" className="mx-2" />
+                                <img src="/images/threed_image_one.webp" alt="texture" className="mx-2" />
                                 helping businesses to bring their</span>
                             <span style={{ color: 'color:rgba(54, 45, 45, 1)' }}> vision to life and drive the
-                                <img src="/images/threed_image_two.png" alt="texture" className="mx-2" />
+                                <img src="/images/threed_image_two.webp" alt="texture" className="mx-2" />
                                 global
                             </span>
                             <span style={{ color: 'color: rgba(5, 6, 16, 1)' }}>innovation forward.</span>

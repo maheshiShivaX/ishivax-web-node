@@ -43,7 +43,7 @@ const ServicesStats = () => {
             const response = await axiosIns.get(API_URL.getServices);
 
             // Get the encrypted header
-            const encrypted = response.headers["x-encrypted"];
+            const encrypted = response?.data?.payload;
 
             // Fallback if header is missing
             if (!encrypted) {
@@ -77,102 +77,104 @@ const ServicesStats = () => {
             <section>
                 <div className={`fw-main-row ${isLight ? 'black-bg-content-LIGHT' : 'black-bg-content'}`}>
                     <div className="fw-full-container-top pb-5" style={{ backgroundImage: 'url(./images/bg-dots.png)' }}>
-                        <div className="fw-row">
-                            <div className="fw-col-xs-12 ">
-                                <div className="fw-divider-space" style={{ marginTop: '40px' }}></div>
-                            </div>
-                        </div>
-                        <div className="fw-container">
-                            <div className="seo-media-images">
-                                <img className="top-image-arrow-1" src="./images/Vector-line-straight.png" alt="" />
-                            </div>
-                            <div className="seo-media-images">
-                                <img className="top-image-arrow-2" src="./images/Vector-line-straight.png" alt="" />
-                            </div>
-
-                            <div className="seo-media-images">
-                                <img className="top-image-arrow-3" src="./images/Vector-line-straight.png" alt="" />
-                            </div>
-                            <div className="seo-media-images">
-                                <img className="top-image-arrow-4" src="./images/Vector-line-straight.png" alt="" />
-                            </div>
-
-                        </div>
-                        <div className="content-under-image">
-                            <div className="fw-row ">
-                                <img className="vector-line-1" src="./images/Vector-upper-arrow.png" alt="" />
-                            </div>
+                        <div className='fw-container'>
 
                             <div className="fw-row">
-                                <div className="fw-container ">
-                                    <div className="fw-col-md-4 vector-class">
-                                        <div className="dot-1"></div>
-                                        <div className="dot-2"></div>
-                                        <img className="vector-cross-1" src="./images/vector.png" alt="" />
-                                        <div className="dot-3"></div>
-                                        <div className="dot-4"></div>
-                                    </div>
+                                <div className="fw-col-xs-12 ">
+                                    <div className="fw-divider-space"></div>
+                                </div>
+                            </div>
 
-                                    <div className="fw-col-md-4">
-                                        <div className="fw-heading fw-heading-h2">
-                                            <h2 className={`${isLight ? 'fw-special-title vector-heading-LIGHT' : 'fw-special-title vector-heading'}`}>SERVICES
-                                            </h2>
+                            <div className="d-flex justify-content-between align-items-center banner-seo-media-images">
+                                <div className='seo-media-images-common'>
+                                    <img className="top-image-arrow-1" src="/images/Vector-line-straight.png" alt='' />
+                                    <img className="top-image-arrow-2" src="/images/Vector-line-straight.png" alt='' />
+                                </div>
+
+                                <div className='seo-media-images-common'>
+                                    <img className="top-image-arrow-3" src="/images/Vector-line-straight.png" alt='' />
+                                    <img className="top-image-arrow-4" src="/images/Vector-line-straight.png" alt='' />
+                                </div>
+                            </div>
+
+                            <div className="content-under-image">
+
+                                <div className='top-vector_main'>
+                                    <img className="vector-line-common" src="/images/Vector-upper-arrow.png" alt='' />
+                                    <div className="fw-row">
+                                        <div className="cector-cross-line-allign">
+                                            <div className="vector-class-common">
+                                                <div className='dots-first'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                                <img className="vector-cross-common" src="/images/vector.png" alt='' />
+                                                <div className='dots-second'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                            </div>
+                                            <div className="fw-heading fw-heading-h2 d-flex justify-content-center align-items-center">
+                                                <h2 className={`${isLight ? 'fw-special-title vector-heading-LIGHT' : 'fw-special-title vector-heading'}`}>SERVICES</h2>
+                                            </div>
+                                            <div className="vector-class-common">
+                                                <div className='dots-first'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                                <img className="vector-cross-common" src="/images/vector.png" alt='' />
+                                                <div className='dots-second'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="fw-col-md-4  vector-class">
-                                        <div className="dot-5"></div>
-                                        <div className="dot-6"></div>
-                                        <img className="vector-cross-2" src="./images/vector.png" alt="" />
-                                        <div className="dot-7"></div>
-                                        <div className="dot-8"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="fw-row ">
-                                <img className="vector-line-2" src="./images/Vector-upper-arrow.png" alt="" />
-                            </div>
-                            <div className="fw-row">
-                                <div className="fw-col-xs-12 ">
-                                    <div className="fw-divider-space" style={{ marginTop: '20px' }}></div>
-                                </div>
-                            </div>
-                            <div className="fw-row">
-                                <div className="container">
-                                    <div className="fw-col-xs-12 ">
-                                    </div>
-                                    <div className="fw-col-xs-12 ">
-                                        <p className={`${isLight ? 'heading-common-main-LIGHT' : 'heading-common-main'}`}>Fully Integrated to Transform
-                                            Businesses & Create Iconic Brands</p>
-                                        <p className={`${isLight ? 'heading-common-content-LIGHT' : 'heading-common-content'}`}>At iShivax, integration is our
-                                            ethos. We handle all projects in-house, from conception to
-                                            execution. No off-the-shelf solutions here—only bespoke
-                                            strategies crafted with creativity and expertise in design,
-                                            development, and digital marketing. Clients aren't just
-                                            customers; they're partners, because we prioritize their needs
-                                            above all.
-                                        </p>
-                                    </div>
-                                    <div className="fw-col-xs-12 ">
-
-                                    </div>
+                                    <img className="vector-line-common1" src="/images/Vector-upper-arrow.png" alt='' />
                                 </div>
 
-                            </div>
-
-                            <div className="fw-row" style={{ display: 'flex' }}>
-                                <div className="fw-col-xs-12 ">
-
-                                </div>
-                                {!isLight && (
+                                <div className="fw-row">
                                     <div className="fw-col-xs-12 ">
-                                        <div className="seo-media-images">
-                                            <img className="services-image-desk"
-                                                src="./images/Services-main.webp" alt="" />
+                                        <div className="fw-divider-space" style={{ marginTop: '20px' }}></div>
+                                    </div>
+                                </div>
+                                <div className="fw-row">
+                                    <div className="container">
+                                        <div className="fw-col-xs-12 ">
+                                        </div>
+                                        <div className="fw-col-xs-12 ">
+                                            <p className={`${isLight ? 'heading-common-main-LIGHT' : 'heading-common-main'}`}>Fully Integrated to Transform
+                                                Businesses & Create Iconic Brands</p>
+                                            <p className={`${isLight ? 'heading-common-content-LIGHT' : 'heading-common-content'}`}>At iShivax, integration is our
+                                                ethos. We handle all projects in-house, from conception to
+                                                execution. No off-the-shelf solutions here—only bespoke
+                                                strategies crafted with creativity and expertise in design,
+                                                development, and digital marketing. Clients aren't just
+                                                customers; they're partners, because we prioritize their needs
+                                                above all.
+                                            </p>
+                                        </div>
+                                        <div className="fw-col-xs-12 ">
+
                                         </div>
                                     </div>
-                                )}
-                                <div className="fw-col-xs-12 ">
+
+                                </div>
+
+                                <div className="fw-row" style={{ display: 'flex' }}>
+                                    <div className="fw-col-xs-12 ">
+
+                                    </div>
+                                    {!isLight && (
+                                        <div className="fw-col-xs-12 ">
+                                            <div className="">
+                                                <img className="services-image-desk"
+                                                    src="./images/Services-main.webp" alt="Services" style={{ width: "80%" }} />
+                                            </div>
+                                        </div>
+                                    )}
+                                    <div className="fw-col-xs-12 ">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -255,67 +257,72 @@ const ServicesStats = () => {
                     </div>
                     <div className={`fw-main-row ${isLight ? 'light-bg-content' : 'black-bg-content'}`}>
                         <div className="fw-full-container-top">
-                            <div className="content-under-image py-5">
-                                <div className="fw-row ">
-                                    <img className="vector-line-1 mt-0" src="./images/Vector-upper-arrow.png" alt="" />
-                                </div>
-                                <div className="fw-row">
-                                    <div className="fw-container ">
-                                        <div className="fw-col-md-4 vector-class">
-                                            <div className="dot-1"></div>
-                                            <div className="dot-2"></div>
-                                            <img className="vector-cross-1" src="./images/vector.png" alt="" />
-                                            <div className="dot-3"></div>
-                                            <div className="dot-4"></div>
-                                        </div>
-
-                                        <div className="fw-col-md-4">
-                                            <div className="fw-heading fw-heading-h2" >
-                                                <h2 className={`fw-special-title  ${isLight ? 'vector-heading-LIGHT' : 'vector-heading'}`}>GET IN TOUCH
-                                                </h2>
-                                            </div>
-                                        </div>
-                                        <div className="fw-col-md-4  vector-class">
-                                            <div className="dot-5"></div>
-                                            <div className="dot-6"></div>
-                                            <img className="vector-cross-2" src="./images/vector.png" alt="" />
-                                            <div className="dot-7"></div>
-                                            <div className="dot-8"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="fw-row ">
-                                    <img className="vector-line-2" src="./images/Vector-upper-arrow.png" alt="" />
-                                </div>
-                                <div className="fw-row">
-                                    <div className="fw-col-xs-12 ">
-                                        <div className="fw-divider-space" style={{ marginTop: '20px' }}></div>
-                                    </div>
-                                </div>
-                                <div className="fw-row">
-                                    <div className="container">
-                                        <div className="fw-col-xs-12 ">
-                                        </div>
-                                        <div className="fw-col-xs-12 ">
-                                            <p className={`${isLight ? 'services-for-more-info-LIGHT' : 'services-for-more-info'}`}>For more information email us
-                                                at  <b>business@ishivax.com</b><br /> or call
-                                                at <b>+1 801-701-1806 / </b> <b>+91 9829-19-7777 </b>
-
-                                            </p>
-                                        </div>
-                                        <div className="fw-col-xs-12"
-                                            style={{ display: 'flex', justifyContent: 'center' }}>
-                                            <Link to="/Quote">
-                                                <div className={`join-our-team-button ${isLight ? 'frame-66-Y1q-LIGHT' : 'frame-66-Y1q'}`}>
-                                                    <div className="frame-66-Y1q-arrow get-quote-logo"></div>
-                                                    <div className="frame-66-Y1q-text join-our-team-text">Get A
-                                                        Quote
+                            <div className="fw-container">
+                                <div className="content-under-image py-5">
+                                    <div className='top-vector_main'>
+                                        <img className="vector-line-common" src="/images/Vector-upper-arrow.png" alt='' />
+                                        <div className="fw-row">
+                                            <div className="cector-cross-line-allign">
+                                                <div className="vector-class-common">
+                                                    <div className='dots-first'>
+                                                        <div className="dot-common"></div>
+                                                        <div className="dot-common"></div>
+                                                    </div>
+                                                    <img className="vector-cross-common" src="/images/vector.png" alt='' />
+                                                    <div className='dots-second'>
+                                                        <div className="dot-common"></div>
+                                                        <div className="dot-common"></div>
                                                     </div>
                                                 </div>
-                                            </Link>
+                                                <div className="fw-heading fw-heading-h2 d-flex justify-content-center align-items-center">
+                                                    <h2 className={`${isLight ? 'fw-special-title vector-heading-LIGHT' : 'fw-special-title vector-heading'}`}>GET IN TOUCH</h2>
+                                                </div>
+                                                <div className="vector-class-common">
+                                                    <div className='dots-first'>
+                                                        <div className="dot-common"></div>
+                                                        <div className="dot-common"></div>
+                                                    </div>
+                                                    <img className="vector-cross-common" src="/images/vector.png" alt='' />
+                                                    <div className='dots-second'>
+                                                        <div className="dot-common"></div>
+                                                        <div className="dot-common"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <img className="vector-line-common1" src="/images/Vector-upper-arrow.png" alt='' />
+                                    </div>
+
+                                    <div className="fw-row">
                                         <div className="fw-col-xs-12 ">
                                             <div className="fw-divider-space" style={{ marginTop: '20px' }}></div>
+                                        </div>
+                                    </div>
+                                    <div className="fw-row">
+                                        <div className="container">
+                                            <div className="fw-col-xs-12 ">
+                                            </div>
+                                            <div className="fw-col-xs-12 ">
+                                                <p className={`${isLight ? 'services-for-more-info-LIGHT' : 'services-for-more-info'}`}>For more information email us
+                                                    at  <b>business@ishivax.com</b><br /> or call
+                                                    at <b>+1 801-701-1806 / </b> <b>+91 9829-19-7777 </b>
+
+                                                </p>
+                                            </div>
+                                            <div className="fw-col-xs-12"
+                                                style={{ display: 'flex', justifyContent: 'center' }}>
+                                                <Link to="/Quote">
+                                                    <div className={`join-our-team-button ${isLight ? 'frame-66-Y1q-LIGHT' : 'frame-66-Y1q'}`}>
+                                                        <div className="frame-66-Y1q-arrow get-quote-logo"></div>
+                                                        <div className="frame-66-Y1q-text join-our-team-text">Get A
+                                                            Quote
+                                                        </div>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                            <div className="fw-col-xs-12 ">
+                                                <div className="fw-divider-space" style={{ marginTop: '20px' }}></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

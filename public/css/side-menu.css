@@ -59,28 +59,28 @@
   /* Return to original size */
 }
 
-
 .home-Vts a {
   color: #e6edff;
 }
 
 @media only screen and (max-width: 767px) {
-
   .home-Vts {
     font-size: 1.4rem;
   }
- 
 
   .fw-menus {
     margin-top: 100px;
   }
 
-  .home-Vts-LIGHT
-  {
+  .home-Vts-LIGHT {
     font-size: 1.4rem;
   }
-}
 
+  .home-Vts {
+    font-size: 1.4rem !important;
+    line-height: 1 !important;
+  }
+}
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
@@ -88,9 +88,6 @@
     margin-top: 150px;
   }
 }
-
-
-
 
 .group-3-yi {
   width: 18.2rem;
@@ -102,7 +99,6 @@
   align-items: center;
 }
 
-
 .group-2-6o {
   margin: 0rem 0.211rem 0.383rem 0rem;
   width: 18.2rem;
@@ -112,7 +108,6 @@
   vertical-align: top;
   flex-shrink: 0;
 }
-
 
 .frame-68-eH {
   box-sizing: border-box;

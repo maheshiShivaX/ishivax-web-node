@@ -127,7 +127,7 @@ const OurEminentSolutions = () => {
                                         </div>
                                     </div>
                                     <div className="frame-7-XAX-img">
-                                        <img src={`${isLight ? item?.lightPath : item?.darkPath}`} alt="" />
+                                        <img src={`${isLight ? item?.lightPath : item?.darkPath}`} alt="" className="w-100" />
                                     </div>
                                 </Link>
                             </div>

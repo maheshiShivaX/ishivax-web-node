@@ -39,19 +39,6 @@ export default function ServicesStats() {
     return (
         <div className="services_mobile_header">
             <Header />
-            {/* <section>
-                <div class="fw-main-row black-bg-content-services">
-                    <div class="fw-full-container-top" style={{ backgroundImage: 'url(/images/bg-dots.png)' }}>
-                        <div class="fw-row">
-                            <div class="fw-col-xs-12 ">
-                                <div class="fw-divider-space" style={{ marginTop: '90px' }}></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section> */}
-
             <section>
                 <div className="fw-main-row middle-content" style={{ backgroundColor: 'f1f1f1' }}>
                     <div className="fw-row">
@@ -463,67 +450,70 @@ export default function ServicesStats() {
 
                 <div className={`fw-main-row ${isLight ? 'light-bg-content' : 'black-bg-content'}`}>
                     <div className="fw-full-container-top py-5">
-                        <div className="content-under-image">
-
-                            <div className="fw-row ">
-                                <img className="vector-line-1 mt-0" src="/images/Vector-upper-arrow.png" alt="" />
-                            </div>
-
-                            <div className="fw-row">
-                                <div className="fw-container ">
-                                    <div className="fw-col-md-4 vector-className">
-                                        <div className="dot-1"></div>
-                                        <div className="dot-2"></div>
-                                        <img className="vector-cross-1" src="/images/vector.png" alt="" />
-                                        <div className="dot-3"></div>
-                                        <div className="dot-4"></div>
-                                    </div>
-
-                                    <div className="fw-col-md-4">
-                                        <div className="fw-heading fw-heading-h2">
-                                            <h2 className={`fw-special-title  ${isLight ? 'vector-heading-LIGHT' : 'vector-heading'}`}>GET IN TOUCH
-                                            </h2>
-                                        </div>
-                                    </div>
-                                    <div className="fw-col-md-4  vector-className">
-                                        <div className="dot-5"></div>
-                                        <div className="dot-6"></div>
-                                        <img className="vector-cross-2" src="/images/vector.png" alt="" />
-                                        <div className="dot-7"></div>
-                                        <div className="dot-8"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="fw-row ">
-                                <img className="vector-line-2" src="/images/Vector-upper-arrow.png" alt="" />
-                            </div>
-                            <div className="fw-row">
-                                <div className="fw-col-xs-12 ">
-                                    <div className="fw-divider-space" style={{ marginTop: '20px' }}></div>
-                                </div>
-                            </div>
-                            <div className="fw-row">
-                                <div className="container">
-                                    <div className="fw-col-xs-12 ">
-                                    </div>
-                                    <div className="fw-col-xs-12 ">
-                                        <p className={`${isLight ? 'services-for-more-info-LIGHT' : 'services-for-more-info'}`}>Find out about how our
-                                            <b>services</b> can be integrated into <b>your business.x</b>
-                                        </p>
-                                    </div>
-                                    <div className="fw-col-xs-12"
-                                        style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <div className={`join-our-team-button ${isLight ? 'frame-66-Y1q-LIGHT' : 'frame-66-Y1q'}`}>
-                                            <div className="frame-66-Y1q-arrow get-quote-logo"></div>
-                                            <div className="frame-66-Y1q-text join-our-team-text">
-                                                <Link to="/Quote">
-                                                    Get A Quote
-                                                </Link>
+                        <div className='fw-container'>
+                            <div className="content-under-image">
+                                <div className='top-vector_main'>
+                                    <img className="vector-line-common" src="/images/Vector-upper-arrow.png" alt='' />
+                                    <div className="fw-row">
+                                        <div className="cector-cross-line-allign">
+                                            <div className="vector-class-common">
+                                                <div className='dots-first'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                                <img className="vector-cross-common" src="/images/vector.png" alt='' />
+                                                <div className='dots-second'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                            </div>
+                                            <div className="fw-heading fw-heading-h2 d-flex justify-content-center align-items-center">
+                                                <h2 className={`${isLight ? 'fw-special-title vector-heading-LIGHT' : 'fw-special-title vector-heading'}`}>GET IN TOUCH</h2>
+                                            </div>
+                                            <div className="vector-class-common">
+                                                <div className='dots-first'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                                <img className="vector-cross-common" src="/images/vector.png" alt='' />
+                                                <div className='dots-second'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <img className="vector-line-common1" src="/images/Vector-upper-arrow.png" alt='' />
+                                </div>
+
+                                <div className="fw-row">
                                     <div className="fw-col-xs-12 ">
                                         <div className="fw-divider-space" style={{ marginTop: '20px' }}></div>
+                                    </div>
+                                </div>
+                                <div className="fw-row">
+                                    <div className="container">
+                                        <div className="fw-col-xs-12 ">
+                                        </div>
+                                        <div className="fw-col-xs-12 ">
+                                            <p className={`${isLight ? 'services-for-more-info-LIGHT' : 'services-for-more-info'}`}>Find out about how our
+                                                <b>services</b> can be integrated into <b>your business.x</b>
+                                            </p>
+                                        </div>
+                                        <div className="fw-col-xs-12"
+                                            style={{ display: 'flex', justifyContent: 'center' }}>
+                                            <div className={`join-our-team-button ${isLight ? 'frame-66-Y1q-LIGHT' : 'frame-66-Y1q'}`}>
+                                                <div className="frame-66-Y1q-arrow get-quote-logo"></div>
+                                                <div className="frame-66-Y1q-text join-our-team-text">
+                                                    <Link to="/Quote">
+                                                        Get A Quote
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="fw-col-xs-12 ">
+                                            <div className="fw-divider-space" style={{ marginTop: '20px' }}></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -1,0 +1,17 @@
+.section-vector__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-vector__decor {
+    width: 100px;
+}
+
+.section-vector__dot {
+    position: relative;
+    width: 4px;
+    height: 4px;
+    background-color: #4c5874;
+    border-radius: 50%;
+}

@@ -1,55 +1,49 @@
-import { useState, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Loader from "./Common/Loader";
-import Banner from "./Shared/Banner";
-import CollaborateWith from "./Shared/CollaborateWith";
 import Layout from "./Shared/Layout";
-import OurBlogsSection from "./Shared/OurBlogsSection";
+import Banner from "./Shared/Banner";
 import OurEminentSolutions from "./Shared/OurEminentSolutions";
 import SmartDevelopment from "./Shared/SmartDevelopment";
 import Video from "./Shared/Video";
-// import Spline from '@splinetool/react-spline';
+import CollaborateWith from "./Shared/CollaborateWith";
+import OurBlogsSection from "./Shared/OurBlogsSection";
+import { ThemeContext } from "../Contaxt/ThemeContext";
 
 const Home = () => {
-    const [loaderDone, setLoaderDone] = useState(false);
+    const { loaderDone, startExit, setIsSettled, hasLoadedOnce, setLasLoadedOnce } =
+        useContext(ThemeContext);
 
-    const handleLoaderDone = () => {
-        // 1. Reset scroll so home appears from TOP
-        window.scrollTo({ top: 0, behavior: "instant" });
-
-        // 2. Show Home
-        setLoaderDone(true);
-
-        // ⏱️ Keep BODY black for 3 seconds
-        document.body.style.backgroundColor = "#000000";
-
-        setTimeout(() => {
-            document.body.style.backgroundColor = "";
-        }, 3000);
-    };
-
+    // Initial lock
     useEffect(() => {
-        // Disable scrolling while loader is visible
-        document.body.style.overflow = "hidden";
-        document.body.style.backgroundColor = "#000000";
-
-        return () => {
-            document.body.style.overflow = "auto";
-            document.body.style.backgroundColor = "";
-        };
+        window.scrollTo(0, 0);
+        document.body.style.backgroundColor = "#181818";
     }, []);
 
+    // Handle pause + unlock
     useEffect(() => {
-        if (loaderDone) {
-            // Enable scroll after loader vanish
+        if (!loaderDone) return;
+
+        // ⏸ HOLD zoomed-out screen
+        const settleTimer = setTimeout(() => {
+            // setIsSettled(true);
+
             document.body.style.overflow = "auto";
-        }
-    }, [loaderDone]);
+            document.body.style.backgroundColor = "#fff";
+            setLasLoadedOnce(true);
+
+        }, 2200); // 1.2s animation + 1s pause
+
+        return () => clearTimeout(settleTimer);
+    }, [loaderDone, setIsSettled, setLasLoadedOnce]);
 
     return (
         <>
-            {!loaderDone && <Loader onComplete={handleLoaderDone} />}
+            {!loaderDone && <Loader />}
 
-            <div className={`home-wrapper ${loaderDone ? "show" : ""}`}>
+            <div
+                className={`home-wrapper ${startExit && !hasLoadedOnce ? "reveal" : ""
+                    } ${loaderDone ? "final" : ""}`}
+            >
                 <Layout>
                     <Banner />
                     <OurEminentSolutions />
@@ -59,9 +53,6 @@ const Home = () => {
                     <OurBlogsSection />
                 </Layout>
             </div>
-            {/* <div style={{ height: "100vh", background: "#000" }}>
-                <Spline scene="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode" />
-            </div> */}
         </>
     );
 };

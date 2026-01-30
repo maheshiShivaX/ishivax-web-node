@@ -1,49 +1,30 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import "../../ComponentsCss/Loader.css";
+import { ThemeContext } from "../../Contaxt/ThemeContext";
 
-const Loader = ({ onComplete }) => {
-    const [progress, setProgress] = useState(0);
-    const [zoomOut, setZoomOut] = useState(false);
+const Loader = () => {
+  const { startExit, setStartExit, setLoaderDone } =
+    useContext(ThemeContext);
 
-    useEffect(() => {
-        let interval = setInterval(() => {
-            setProgress(prev => {
-                if (prev >= 100) {
-                    clearInterval(interval);
+  useEffect(() => {
+    const gifTimer = setTimeout(() => {
+      setStartExit(true);
 
-                    // Start zoom-out animation
-                    setZoomOut(true);
+      const exitTimer = setTimeout(() => {
+        setLoaderDone(true); // ONLY animation end
+      }, 1200); // animation duration
 
-                    // After animation → complete
-                    setTimeout(() => {
-                        onComplete();
-                    }, 1000); // matches loaderExit duration
+      return () => clearTimeout(exitTimer);
+    }, 6000);
 
-                    return 100;
-                }
-                return prev + 0.5;
-            });
-        }, 20);
+    return () => clearTimeout(gifTimer);
+  }, [setLoaderDone, setStartExit]);
 
-        return () => clearInterval(interval);
-    }, [onComplete]);
-
-    return (
-        <div className={`loader-wrapper ${zoomOut ? "loader-zoom-out" : ""}`}>
-            <div className="loader-content">
-                <div className="loader-logo">
-                    <img src="/images/ishivaxlogo.png" alt="Logo" />
-                </div>
-
-                <div className="loader-bar">
-                    <div
-                        className="loader-bar-fill"
-                        style={{ width: `${progress}%` }}
-                    />
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div className={`loader-wrapper ${startExit ? "exit" : ""}`}>
+      <img src="/images/loaderzif.gif" alt="Loading" />
+    </div>
+  );
 };
 
 export default Loader;

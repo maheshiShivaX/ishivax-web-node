@@ -4,7 +4,7 @@ import Header from "../Header";
 import { ThemeContext } from "../../../Contaxt/ThemeContext";
 
 const Join = () => {
-const { isLight } = useContext(ThemeContext);
+    const { isLight } = useContext(ThemeContext);
 
     return (
         <div>
@@ -12,90 +12,83 @@ const { isLight } = useContext(ThemeContext);
             <section>
                 <div className={`fw-main-row ${isLight ? 'black-bg-content-LIGHT' : 'black-bg-content'}`}>
                     <div className="fw-full-container-top" style={{ backgroundImage: 'url(./images/bg-dots.png)' }}>
-                        <div className="fw-row">
-                            <div className="fw-col-xs-12 ">
-                                <div className="fw-divider-space" style={{ marginTop: '120px' }}></div>
-                            </div>
-                        </div>
-                        <div className="fw-container">
-
-                            <div className="seo-media-images"> 
-                                <img className="top-image-arrow-1" src="./images/Vector-line-straight.png" alt="" />
-                            </div>
-                            <div className="seo-media-images">
-                                <img className="top-image-arrow-2" src="./images/Vector-line-straight.png" alt="" />
-                            </div>
-
-                            <div className="seo-media-images">
-                                <img className="top-image-arrow-3" src="./images/Vector-line-straight.png" alt="" />
-                            </div>
-                            <div className="seo-media-images">
-                                <img className="top-image-arrow-4" src="./images/Vector-line-straight.png" alt="" />
-                            </div>
-
-                        </div>
-                        <div className="content-under-image">
-
-                            <div className="fw-row ">
-                                <img className="vector-line-1" src="./images/Vector-upper-arrow.png" alt="" />
-                            </div>
-
+                        <div className='fw-container'>
                             <div className="fw-row">
-                                <div className="fw-container ">
-                                    <div className="fw-col-md-4 vector-className">
-                                        <div className="dot-1"></div>
-                                        <div className="dot-2"></div>
-                                        <img className="vector-cross-1" src="./images/vector.png" alt="" />
-                                        <div className="dot-3"></div>
-                                        <div className="dot-4"></div>
-                                    </div>
+                                <div className="fw-col-xs-12 ">
+                                    <div className="fw-divider-space"></div>
+                                </div>
+                            </div>
 
-                                    <div className="fw-col-md-4">
-                                        <div className="fw-heading fw-heading-h2">
-                                            <h2 className='fw-special-title vector-heading'>JOIN US
-                                            </h2>
+                            <div className="d-flex justify-content-between align-items-center banner-seo-media-images">
+                                <div className='seo-media-images-common'>
+                                    <img className="top-image-arrow-1" src="/images/Vector-line-straight.png" alt='' />
+                                    <img className="top-image-arrow-2" src="/images/Vector-line-straight.png" alt='' />
+                                </div>
+
+                                <div className='seo-media-images-common'>
+                                    <img className="top-image-arrow-3" src="/images/Vector-line-straight.png" alt='' />
+                                    <img className="top-image-arrow-4" src="/images/Vector-line-straight.png" alt='' />
+                                </div>
+                            </div>
+                            <div className="content-under-image">
+                                <div className='top-vector_main'>
+                                    <img className="vector-line-common" src="/images/Vector-upper-arrow.png" alt='' />
+                                    <div className="fw-row">
+                                        <div className="cector-cross-line-allign">
+                                            <div className="vector-class-common">
+                                                <div className='dots-first'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                                <img className="vector-cross-common" src="/images/vector.png" alt='' />
+                                                <div className='dots-second'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                            </div>
+                                            <div className="fw-heading fw-heading-h2 d-flex justify-content-center align-items-center">
+                                                <h2 className={`${isLight ? 'fw-special-title vector-heading-LIGHT' : 'fw-special-title vector-heading'}`}>JOIN US</h2>
+                                            </div>
+                                            <div className="vector-class-common">
+                                                <div className='dots-first'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                                <img className="vector-cross-common" src="/images/vector.png" alt='' />
+                                                <div className='dots-second'>
+                                                    <div className="dot-common"></div>
+                                                    <div className="dot-common"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="fw-col-md-4  vector-className">
-                                        <div className="dot-5"></div>
-                                        <div className="dot-6"></div>
-                                        <img className="vector-cross-2" src="./images/vector.png" alt="" />
-                                        <div className="dot-7"></div>
-                                        <div className="dot-8"></div>
+                                    <img className="vector-line-common1" src="/images/Vector-upper-arrow.png" alt='' />
+                                </div>
+                                <div className="fw-row">
+                                    <div className="fw-col-xs-12 ">
+                                        <div className="fw-divider-space" style={{ marginTop: '20px' }}></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="fw-row ">
-                                <img className="vector-line-2" src="./images/Vector-upper-arrow.png" alt="" />
-                            </div>
-                            <div className="fw-row">
-                                <div className="fw-col-xs-12 ">
-                                    <div className="fw-divider-space" style={{ marginTop: '20px' }}></div>
-                                </div>
-                            </div>
-                            <div className="fw-row">
-                                <div className="container">
-                                    <div className="fw-col-xs-12 ">
+                                <div className="fw-row">
+                                    <div className="container">
+                                        <div className="fw-col-xs-12 ">
 
-                                    </div>
-                                    <div className="fw-col-xs-12 ">
-                                        <p className="heading-common-main">LET'S START WORKING TOGETHER. GET IN
-                                            TOUCH
-                                        </p>
-                                        <p className="heading-common-content">Join iShivax and accelerate your career with cutting-edge projects and a dynamic team!</p>
+                                        </div>
+                                        <div className="fw-col-xs-12 ">
+                                            <p className="heading-common-main">LET'S START WORKING TOGETHER. GET IN
+                                                TOUCH
+                                            </p>
+                                            <p className="heading-common-content">Join iShivax and accelerate your career with cutting-edge projects and a dynamic team!</p>
 
-                                    </div>
-                                    <div className="fw-col-xs-12 ">
-
+                                        </div>
+                                        <div className="fw-col-xs-12 ">
+                                        </div>
                                     </div>
                                 </div>
-
-                            </div>
-
-
-                            <div className="fw-row">
-                                <div className="fw-col-xs-12 ">
-                                    <div className="fw-divider-space" style={{ marginTop: '50px' }}></div>
+                                <div className="fw-row">
+                                    <div className="fw-col-xs-12 ">
+                                        <div className="fw-divider-space" style={{ marginTop: '50px' }}></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -141,7 +134,7 @@ const { isLight } = useContext(ThemeContext);
                                     <p className="content-loc-info">iShivax LLC -205, The Hills Drive, Texas, Austin - 76738 (USA)</p>
                                 </div>
                                 <div className="frame-loc-info" style={{ display: 'flex' }}>
-                                    <img src="./images/conttact-mobile-icon.svg"  alt=""/>
+                                    <img src="./images/conttact-mobile-icon.svg" alt="" />
                                     <p className="content-loc-info">+91-9782345795 / +1-801 701 1806</p>
                                 </div>
                                 <div className="frame-loc-info" style={{ display: 'flex' }}>
@@ -210,7 +203,7 @@ const { isLight } = useContext(ThemeContext);
                     </div>
                 </a>
             </section>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

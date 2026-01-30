@@ -19,7 +19,13 @@ export const ThemeProvider = ({ children }) => {
         setIsLight(prev => !prev);
     };
 
-    const [data, setData] = useState()
+    const [data, setData] = useState();
+
+    const [hasLoadedOnce, setLasLoadedOnce] = useState(false);
+
+    const [loaderDone, setLoaderDone] = useState(false);
+    const [startExit, setStartExit] = useState(false);
+    const [isSettled, setIsSettled] = useState(false);
 
     const fetchData = async () => {
 
@@ -67,7 +73,11 @@ export const ThemeProvider = ({ children }) => {
                 changeTheme,
                 isLight,
                 setIsLight,
-                data
+                data,
+                loaderDone, setLoaderDone,
+                startExit, setStartExit,
+                isSettled, setIsSettled,
+                hasLoadedOnce, setLasLoadedOnce
             }}
         >
             {children}

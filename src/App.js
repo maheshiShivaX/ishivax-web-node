@@ -26,7 +26,7 @@ import ScrollToTop from './utils/ScrollToTop';
 import { ThemeProvider } from './Contaxt/ThemeProvider';
 import BlogById from './Components/BlogById';
 import ServicesDetails from './Components/Shared/ServicesPage/ServiceDetails';
-
+import MetaPixel from './utils/MetaPixel';
 
 function App() {
 
@@ -34,7 +34,7 @@ function App() {
     const mouseMoveHandler = (e) => {
 
       gsap.to('.cursor', {
-        duration: 2,
+        duration: 1,
         x: e.clientX,
         y: e.clientY,
         ease: 'back.out',
@@ -53,9 +53,12 @@ function App() {
       <div className="cursor"
 
       ></div>
+
       <ThemeProvider>
         <ToastContainer />
         <BrowserRouter>
+          {/* ✅ Meta Pixel Tracker */}
+          <MetaPixel />
           <ScrollToTop />
           <Routes>
             <Route exact path="/" element={<Home />} />

@@ -8,9 +8,6 @@ const Iotsolutions = () => {
             <Header />
             <section>
                 <div className="fw-main-row middle-content" style={{ backgroundColor: 'f1f1f1' }}>
-
-
-
                     <div className="fw-row">
                         <div className="fw-col-xs-12 ">
 
@@ -18,11 +15,7 @@ const Iotsolutions = () => {
                         </div>
                     </div>
 
-
-
                     <div className="fw-container">
-
-
                         <div className="fw-row">
                             <div className="fw-col-xs-12 ">
 
@@ -31,19 +24,13 @@ const Iotsolutions = () => {
                                 </p>
                             </div>
                         </div>
-
-
-
                         <div className="fw-row">
                             <div className="fw-col-xs-12 ">
 
                                 <div className="fw-divider-space" style={{ marginTop: '20px' }}></div>
                             </div>
                         </div>
-
-
                         <div className="fw-row">
-
                         </div>
                         <div className="fw-row">
                             <div className="fw-col-xs-12 fw-col-sm-6 fw-col-md-6  ">
@@ -57,46 +44,25 @@ const Iotsolutions = () => {
                                 </div>
                             </div>
                             <div className="fw-col-xs-12 fw-col-sm-6 fw-col-md-6  ">
-                                <div className="seo-media-images">
+                                <div className="">
                                     <img src="./images/mobile-services-main.webp" alt="" />
                                 </div>
                             </div>
-
-
                         </div>
-
-
                         <div className="fw-row">
                             <div className="fw-col-xs-12 ">
 
                                 <div className="fw-divider-space" style={{ marginTop: '60px' }}></div>
                             </div>
                         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         <div className="fw-main-row middle-content">
                             <div className="fw-container">
-
                                 <div className="fw-row">
                                     <div className="fw-col-xs-12 ">
 
                                         <div className="fw-divider-space" style={{ marginTop: '60px' }}></div>
                                     </div>
                                 </div>
-
-
                                 <div className="fw-row">
                                     <div className="fw-col-xs-12 ">
                                         <div className="fw-heading fw-heading-h2">

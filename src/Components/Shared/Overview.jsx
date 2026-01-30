@@ -136,7 +136,7 @@ const Overview = ({ overviewData }) => {
                     </div>
 
                     <div className="fw-col-xs-12 fw-col-sm-6 hover_inAll" >
-                        <div className="seo-media-images image-rocket">
+                        <div className="image-rocket">
                             <img id="image-preview" src={activeItem?.imagePath} alt="Content visual" />
                         </div>
                     </div>
