@@ -127,7 +127,7 @@ const Join = () => {
                                 </div>
                                 <div className="frame-loc-info" style={{ display: 'flex' }}>
                                     <img src="./images/contact-location.svg" alt="" />
-                                    <p className="content-loc-info">iShivax - 17, Civil Lines, Jaipur, Rajasthan - 302006 (Bharat)</p>
+                                    <p className="content-loc-info">iShivax - B-8/2 Shiv Marg, Banipark, Jaipur, Rajasthan - 302016 (Bharat)</p>
                                 </div>
                                 <div className="frame-loc-info" style={{ display: 'flex' }}>
                                     <img src="./images/contact-location.svg" alt="" />

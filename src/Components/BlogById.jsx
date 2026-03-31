@@ -10,12 +10,12 @@ const BlogById = () => {
     const { isLight } = useContext(ThemeContext);
     const [blogData, setBlogData] = useState();
     const params = useParams();
-    const blogId = params?.id;
+    const blogId = params?.slug; // Assuming the route parameter is named 'slug'
 
     useEffect(() => {
         const fetchBlogDetailById = async () => {
             try {
-                const response = await axiosIns.get(`${API_URL.GetBlogDetailById}?pBlogDetailId=${blogId}`);
+                const response = await axiosIns.get(`${API_URL.GetBlogDetailBySlug}?pBlogSlug=${blogId}`);
 
                 if (response.status === 200 && response.data.isSuccess === 1) {
                     setBlogData(response?.data?.data);
@@ -123,9 +123,9 @@ const BlogById = () => {
                                     <div className="container">
                                         {!isLight && (
                                             <div className="fw-col-xs-12 ">
-                                                <div className="seo-media-images">
+                                                <div className="">
                                                     <img className="services-image-desk"
-                                                        src="/images/TECHtechaboutus.webp" alt="" />
+                                                        src="/images/TECHtechaboutus.webp" alt="" style={{width:"80%"}} />
                                                 </div>
                                             </div>
                                         )}
@@ -148,12 +148,12 @@ const BlogById = () => {
                     <div className="our-blogs-section">
                         <div className='container'>
                             <div className='our_blog_container'>
-                                <div className='our_blog_heading_container'>
+                                {/* <div className='our_blog_heading_container'>
                                     <div className='our_blog_inner'>
                                         <h4 className="blog_inner_heading_blogpage">A Deep Dive into Our Consulting Blogs</h4>
                                         <p className="blog_page_description mb-0">Our agency help businesses develop strategic plans to define their long-term goals, objectives, and the actions needed to achieve them.</p>
                                     </div>
-                                </div>
+                                </div> */}
                                 {/* <div className='our_blog_select_type'>
                                     <div className='our_blog_select_type_inner'>
                                         <div className='our_blog_type_button'>

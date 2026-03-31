@@ -33,10 +33,8 @@ const OurBlogsSection = () => {
         try {
             const response = await axiosIns.get(API_URL.GetBlogDetailAll);
 
-            // Get the encrypted header
-            const encrypted = response.headers["x-encrypted"];
+            const encrypted = response?.data?.payload;
 
-            // Fallback if header is missing
             if (!encrypted) {
                 setBlogData([]);
                 return;
@@ -45,9 +43,15 @@ const OurBlogsSection = () => {
             // Attempt to decrypt
             const decrypted = decryptData(encrypted);
 
-            // Validate decrypted data
-            if (decrypted && decrypted.isSuccess === 1 && Array.isArray(decrypted.data)) {
-                const sortedData = decrypted.data?.sort((a, b) => new Date(b.blogDate) - new Date(a.blogDate));
+            if (
+                decrypted &&
+                decrypted.isSuccess === 1 &&
+                Array.isArray(decrypted.data)
+            ) {
+                const sortedData = decrypted.data
+                    .sort((a, b) => new Date(b.blogDate) - new Date(a.blogDate))
+                    .slice(0, 3); // ✅ only 6 items
+
                 setBlogData(sortedData);
             } else {
                 setBlogData([]);

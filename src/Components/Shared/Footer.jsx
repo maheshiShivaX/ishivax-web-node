@@ -258,7 +258,7 @@ const Footer = () => {
 
                         <div className="row mt-4 mt-sm-0">
                             <div className="col-md-6 col-lg-6 ">
-                                <div className="row">
+                                <div className="row align-items-center">
                                     <div className="col-lg-4 col-md-4 col-sm-4 col-4">
                                         <aside id="nav_menu-2" className="widget widget_nav_menu">
                                             {/* <h3 className="footer-widget-title"></h3> */}
@@ -280,13 +280,21 @@ const Footer = () => {
                                 </div>
                             </div>
 
-                            <div className="col-md-6 col-lg-6 tech-quick">
-                                <div className="col-sm-12 col-md-6 col-lg-6">
+                            <div className="col-12 col-md-6 col-lg-6 tech-quick">
+                                <div className="col-md-6 col-lg-6">
                                     <aside id="nav_menu-2" className="widget widget_nav_menu">
                                         {/* <h3 className="footer-widget-title"></h3> */}
 
                                         <img src="https://images.dmca.com/Badges/dmca-badge-w250-2x1-04.png?ID=3b5e8e2d-1356-4a0e-be12-d84f99496987"
                                             alt="DMCA.com Protection Status" className="footer_dmca hover_inAll" />
+                                    </aside>
+                                </div>
+                                <div className="col-md-6 col-lg-6">
+                                    <aside id="nav_menu-2" className="widget widget_nav_menu">
+                                        {/* <h3 className="footer-widget-title"></h3> */}
+
+                                        <img src="/images/istart.png"
+                                            alt="DMCA.com Protection Status" className="footer_dmca hover_inAll" style={{borderRadius:"10px"}} />
                                     </aside>
                                 </div>
 

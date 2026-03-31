@@ -15,3 +15,15 @@
     background-color: #4c5874;
     border-radius: 50%;
 }
+
+@media only screen and (max-width : 572px) {
+    .section-vector__decor {
+        display: none;
+    }
+
+    .section-vector__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -26,18 +26,16 @@ const Blog = () => {
         return description;
     };
 
-    const handleModalToggle = (id) => {
-        navigate(`/blog/${id}`)
+    const handleModalToggle = (slug) => {
+        navigate(`/blog/${slug}`)
     };
 
     const fetchBlogDetailAll = async () => {
         try {
             const response = await axiosIns.get(API_URL.GetBlogDetailAll);
 
-            // Get the encrypted header
-            const encrypted = response.headers["x-encrypted"];
+            const encrypted = response?.data?.payload;
 
-            // Fallback if header is missing
             if (!encrypted) {
                 setBlogData([]);
                 return;
@@ -80,7 +78,6 @@ const Blog = () => {
     const handleFilter = (blogTypeId) => {
         setSelectedBlogType(blogTypeId === selectedBlogType ? null : blogTypeId);
     };
-
 
     return (
         <div>
@@ -141,7 +138,7 @@ const Blog = () => {
                                     </div>
                                     <img className="vector-line-common1" src="/images/Vector-upper-arrow.png" alt='' />
                                 </div>
-                                
+
                                 <div className="fw-row">
                                     <div className="fw-col-xs-12 ">
                                         <div className="fw-divider-space" style={{ marginTop: '20px' }}></div>
@@ -171,7 +168,7 @@ const Blog = () => {
                                             <div className="fw-col-xs-12 ">
                                                 <div className="">
                                                     <img className="services-image-desk"
-                                                        src="/images/TECHtechaboutus.webp" alt="" style={{width:"80%"}} />
+                                                        src="/images/TECHtechaboutus.webp" alt="" style={{ width: "80%" }} />
                                                 </div>
                                             </div>
                                         )}
@@ -227,7 +224,7 @@ const Blog = () => {
                                 <div className='our_blog_card_container'>
                                     <div className='our_blog_card_inner row'>
                                         {filteredBlogs?.length > 0 && filteredBlogs?.map((blog, index) => (
-                                            <div className='our_blog_card_image col-lg-4 col-md-6 col-sm-12 hover_inAll mb-4' key={index} onClick={() => handleModalToggle(blog?.blogId)} style={{ cursor: "pointer" }}>
+                                            <div className='our_blog_card_image col-lg-4 col-md-6 col-sm-12 hover_inAll mb-4' key={index} onClick={() => handleModalToggle(blog?.blogSlug)} style={{ cursor: "pointer" }}>
                                                 <div className='' key={index}>
                                                     <div className='our_blog_card_image_container'>
                                                         <img src={`${blog?.blogImage}`} alt='blog' />

@@ -231,7 +231,7 @@ const ContactUs = () => {
                                 </div>
                                 <div className="frame-loc-info" style={{ display: 'flex' }}>
                                     <img src="/images/contact-location.svg" alt="" />
-                                    <p className="content-loc-info">iShivax - 17, Civil Lines, Jaipur, Rajasthan - 302006 (Bharat)</p>
+                                    <p className="content-loc-info">iShivax - B-8/2 Shiv Marg, Banipark, Jaipur, Rajasthan - 302016 (Bharat)</p>
                                 </div>
                                 <div className="frame-loc-info" style={{ display: 'flex' }}>
                                     <img src="/images/contact-location.svg" alt="" />
@@ -334,7 +334,7 @@ const ContactUs = () => {
                         </div>
                     </div>
                 </div>
-                <a href="https://maps.app.goo.gl/hrpY4tvpMSnYMUPp8?g_st=iw">
+                <a href="https://maps.app.goo.gl/HjpjM6vXt1TGAcDQ7">
                     <div className="contact-location-map">
                     </div>
                 </a>

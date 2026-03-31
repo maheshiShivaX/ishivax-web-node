@@ -131,7 +131,7 @@
 
 
 .circle_box img {
-  border-radius: 100px;
+  /* border-radius: 100px; */
   max-height: 60px;
   max-width: 60px;
 }
@@ -172,8 +172,8 @@
 
 @media only screen and (max-width:572px) {
   .circle_box {
-    width: 70px;
-    height: 70px;
+    width: 75px;
+    height: 75px;
     padding: 5px;
   }
 
@@ -198,8 +198,8 @@
   }
 
   .round_circle img {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
   }
 
   .round_circle {

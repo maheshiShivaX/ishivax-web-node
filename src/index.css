@@ -5550,7 +5550,8 @@ body .fade-page {
 
 @media (max-width: 767px) {
   .tech-quick {
-    display: unset !important;
+    display: flex !important;
+    justify-content: center;
   }
 
   .woocommerce-account .woocommerce #customer_login .col-1,
@@ -33269,6 +33270,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 
 .tech-quick {
   display: flex;
+  align-items: center;
 }
 
 
@@ -34605,7 +34607,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   .frame-7-XAX,
   .frame-8-XAX,
   .frame-9-XAX {
-    width: 100%;
+    width: auto;
     /* height: 475px; */
     padding: 25px;
   }

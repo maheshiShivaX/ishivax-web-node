@@ -5,37 +5,64 @@ import Overview from "./Overview";
 import axiosIns, { API_URL } from "../../config";
 import { decryptData } from "../../_services";
 
+const data = [
+    {
+        title: "IOT & AUTOMATION SOLUTIONS",
+        description:
+            "Elevate efficiency and innovation through IoT and automation solutions.",
+        lightPath: "/images/iot-light.webp",
+        darkPath: "/images/iot-dark.webp",
+        link: "/service-iot-automation"
+    },
+    {
+        title: "DESIGN & MARKETING MASTERY",
+        description:
+            "Creative strategies to build powerful brand presence and growth.",
+        lightPath: "/images/design-light.webp",
+        darkPath: "/images/design-dark.webp",
+        link: "/service-design-marketing"
+    },
+    {
+        title: "WEB & APP EXCELLENCE",
+        description:
+            "Scalable web and mobile apps with modern technologies.",
+        lightPath: "/images/web-light.webp",
+        darkPath: "/images/web-dark.webp",
+        link: "/service-mobile-app"
+    }
+];
+
 const OurEminentSolutions = () => {
     const { isLight } = useContext(ThemeContext);
-    const [data, setData] = useState();
+    // const [data, setData] = useState();
     const [overviewData, setOverviewData] = useState()
 
-    const fetchData = async () => {
-        try {
-            const response = await axiosIns.get(API_URL.GetCreative);
+    // const fetchData = async () => {
+    //     try {
+    //         const response = await axiosIns.get(API_URL.GetCreative);
 
-            // Get the encrypted header
-            const encrypted = response.headers["x-encrypted"];
+    //         // Get the encrypted header
+    //         const encrypted = response.headers["x-encrypted"];
 
-            // Fallback if header is missing
-            if (!encrypted) {
-                setData([]);
-                return;
-            }
+    //         // Fallback if header is missing
+    //         if (!encrypted) {
+    //             setData([]);
+    //             return;
+    //         }
 
-            // Attempt to decrypt
-            const decrypted = decryptData(encrypted);
+    //         // Attempt to decrypt
+    //         const decrypted = decryptData(encrypted);
 
-            // Validate decrypted data
-            if (decrypted && decrypted.isSuccess === 1 && Array.isArray(decrypted.data)) {
-                setData(decrypted.data);
-            } else {
-                setData([]);
-            }
-        } catch (error) {
-            setData([]);
-        }
-    };
+    //         // Validate decrypted data
+    //         if (decrypted && decrypted.isSuccess === 1 && Array.isArray(decrypted.data)) {
+    //             setData(decrypted.data);
+    //         } else {
+    //             setData([]);
+    //         }
+    //     } catch (error) {
+    //         setData([]);
+    //     }
+    // };
 
     const fetchOverviewData = async () => {
         try {
@@ -64,9 +91,9 @@ const OurEminentSolutions = () => {
         }
     };
 
-    useEffect(() => {
-        fetchData();
-    }, []);
+    // useEffect(() => {
+    //     fetchData();
+    // }, []);
 
     useEffect(() => {
         fetchOverviewData();
@@ -86,7 +113,7 @@ const OurEminentSolutions = () => {
                         Your Trusted IT partner.
                     </p>
                 </div>
-                <div className="fw-container mb-md-4 mb-3" style={{overflow:"hidden"}}>
+                <div className="fw-container mb-md-4 mb-3" style={{ overflow: "hidden" }}>
                     <div className="fw-row">
                         <div className="fw-col-xs-12 ">
                             <div className="fw-heading fw-heading-h2">
@@ -119,7 +146,7 @@ const OurEminentSolutions = () => {
 
                         {data?.length > 0 && data?.map((item, i) => (
                             <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12 hover_inAll mb-lg-auto mb-4" key={i}>
-                                <Link to="/service-mobile-app" style={{position:"relative"}}>
+                                <Link to="/service-mobile-app" style={{ position: "relative" }}>
                                     <div className="frame-7-XAX">
                                         <p className="mobile-app-development-2sy">{item?.title}</p>
                                         <div>
@@ -127,7 +154,7 @@ const OurEminentSolutions = () => {
                                         </div>
                                     </div>
                                     <div className="frame-7-XAX-img">
-                                        <img src={`${isLight ? item?.lightPath : item?.darkPath}`} alt="" className="w-100" />
+                                        <img  src={isLight ? item.lightPath : item.darkPath} alt="" className="w-100" />
                                     </div>
                                 </Link>
                             </div>

@@ -27,6 +27,7 @@ import { ThemeProvider } from './Contaxt/ThemeProvider';
 import BlogById from './Components/BlogById';
 import ServicesDetails from './Components/Shared/ServicesPage/ServiceDetails';
 import MetaPixel from './utils/MetaPixel';
+import Gamezone from './Components/Common/Gamezone';
 
 function App() {
 
@@ -69,7 +70,8 @@ function App() {
             <Route exact path="/service-mobile-app" element={<ServicesMobile />} />
             <Route exact path="/jointeam" element={<Join />} />
             <Route exact path="/blog" element={<Blog />} />
-            <Route exact path="/blog/:id" element={<BlogById />} />
+            {/* <Route exact path="/blog/:id" element={<BlogById />} /> */}
+            <Route exact path="/blog/:slug" element={<BlogById />} />
             <Route exact path="/privacy-policy" element={<PrivacyPolicyBanner />} />
             <Route exact path="/terms-conditions" element={<TermsConditionsPage />} />
             <Route exact path="/product-portfolio" element={<ProductPortfolioPage />} />
@@ -81,6 +83,7 @@ function App() {
             <Route exact path="/iot-solution" element={<Iotsolutions />} />
             <Route exact path="/view-cto-details" element={<ViewCTODetails />} />
             <Route exact path="/services-details/:slug" element={<ServicesDetails />} />
+            <Route exact path="/fun-zone" element={<Gamezone/>} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

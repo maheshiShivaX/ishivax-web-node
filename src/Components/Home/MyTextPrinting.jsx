@@ -40,10 +40,10 @@ const MyTextPrinting = (props) => {
                             <div className='elemebt_section'>
                                 <img src='/images/ModelSection/element1.png' alt='' className='element1' />
                                 <img src='/images/ModelSection/element2.png' alt='' className='element2' />
-                                <img style={{ width: "80%" }} src='/images/ModelSection/modelcircle.png' alt='' />
+                                <img style={{ width: "80%" }} src='/images/ModelSection/modelcircle.webp' alt='' />
                             </div>
                         </div>
-                        <img style={{ width: "50%" }} src='/images/ModelSection/Model.png' alt='' className='model-boy-image' />
+                        <img style={{ width: "50%" }} src='/images/ModelSection/Model.webp' alt='' className='model-boy-image' />
                     </div>
                 </div>
             </div>

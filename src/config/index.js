@@ -36,6 +36,8 @@ export const API_URL = {
     SaveQuotation: "Quotation/SaveQuotation",
 
     GetBlogDetailById: 'BlogDetail/GetBlogDetailById',
+    GetBlogDetailBySlug: 'BlogDetail/GetBlogDetailBySlug',
+
     GetProductDetailByProductId: 'Product/GetProductDetailByProductId',
 
     GetCollaborate: 'Collaborate/GetCollaborate',
