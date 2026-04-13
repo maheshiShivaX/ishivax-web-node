@@ -32337,7 +32337,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 .fw-full-container-top {
   position: relative;
   z-index: 1;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .header-main-content {
