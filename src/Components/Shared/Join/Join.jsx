@@ -135,7 +135,7 @@ const Join = () => {
                                 </div>
                                 <div className="frame-loc-info" style={{ display: 'flex' }}>
                                     <img src="./images/conttact-mobile-icon.svg" alt="" />
-                                    <p className="content-loc-info">+91-9782345795 / +1-801 701 1806</p>
+                                    <p className="content-loc-info">+91-9782345795 / +1-815 706 4781</p>
                                 </div>
                                 <div className="frame-loc-info" style={{ display: 'flex' }}>
                                     <img src="./images/contact-email-icon.svg" alt="" />
