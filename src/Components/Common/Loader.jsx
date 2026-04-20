@@ -33,16 +33,18 @@ const Loader = () => {
 
   return (
     <div className={`loader-wrapper ${startExit ? "exit" : ""}`}>
-      <img src="/images/loaderzif.gif" alt="Loading" />
-      <div className="progress-container">
-        <div className="progress-bar">
-          <div 
-            className="progress-fill" 
-            style={{ width: `${progress}%` }}
-          >
-            <span className="progress-text">{Math.round(progress)}%</span>
+      <div style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center" }} >
+        <div className="progress-container">
+          <div className="progress-bar">
+            <div
+              className="progress-fill"
+              style={{ width: `${progress}%` }}
+            >
+              <span className="progress-text">{Math.round(progress)}%</span>
+            </div>
           </div>
         </div>
+        <img src="/images/loaderzif.gif" alt="Loading" className="" />
       </div>
     </div>
   );
