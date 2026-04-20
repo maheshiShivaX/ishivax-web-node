@@ -10,24 +10,20 @@ const Loader = () => {
   useEffect(() => {
     const startTime = Date.now();
     const duration = 6000; // 6 seconds total duration
-    let intervalId = null;
+    let isCompleted = false;
 
     const updateProgress = () => {
+      if (isCompleted) return;
+      
       const elapsed = Date.now() - startTime;
       const newProgress = Math.min((elapsed / duration) * 100, 100);
       
-      // Ensure progress always increases smoothly
-      setProgress(prev => {
-        // Only update if new progress is greater than current
-        if (newProgress > prev) {
-          return newProgress;
-        }
-        return prev;
-      });
+      // Always update progress for continuous movement
+      setProgress(newProgress);
 
-      // Check if completed
-      if (newProgress >= 100) {
-        clearInterval(intervalId);
+      // Check if completed and prevent multiple calls
+      if (newProgress >= 100 && !isCompleted) {
+        isCompleted = true;
         setStartExit(true);
 
         const exitTimer = setTimeout(() => {
@@ -38,16 +34,11 @@ const Loader = () => {
       }
     };
 
-    // Start with immediate update
-    updateProgress();
-    
-    // Then continue with regular intervals
-    intervalId = setInterval(updateProgress, 50);
+    // Update more frequently for smoother progress
+    const progressInterval = setInterval(updateProgress, 30); // Update every 30ms
 
     return () => {
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
+      clearInterval(progressInterval);
     };
   }, [setLoaderDone, setStartExit]);
 
