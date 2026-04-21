@@ -150,8 +150,8 @@
     display: inline-flex;
     position: relative;
     border-radius: 999px;
-    padding: 1.5px;
-    background: #e0e0e0;
+    padding: 2px;
+    background: #4285f4;
     transition: background 0.3s;
     line-height: normal;
     overflow: hidden;
@@ -181,19 +181,23 @@
       #4285f4, #ea4335, #fbbc05, #34a853,
       #a142f4, #4285f4
     );
-    opacity: 0;
     z-index: 0;
   }
 
   .gemini-wrap-light:hover {
-    background: #e0e0e0;
+    background: #4285f4;
   }
 
+  .ask-nova-link:hover .gemini-wrap::after,
+  .ask-nova-link:focus-visible .gemini-wrap::after,
+  .ask-nova-link:hover .gemini-wrap-light::after,
+  .ask-nova-link:focus-visible .gemini-wrap-light::after,
   .gemini-wrap-light:hover::after {
     animation: spin-border2 2s linear infinite;
-    opacity: 1;
   }
 
+  .ask-nova-link:hover .gemini-wrap-light::before,
+  .ask-nova-link:focus-visible .gemini-wrap-light::before,
   .gemini-wrap-light:hover::before {
     opacity: 0.5;
   }
@@ -2212,10 +2216,10 @@ h6 {
 
 p {
   line-height: 24px;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
+  /* -webkit-margin-before: 0;
+  -webkit-margin-after: 0; */
   margin: 0 0 5px;
-  word-break: break-word;
+  /* word-break: break-word; */
 }
 
 li ul,

@@ -101,7 +101,7 @@ const OurEminentSolutions = () => {
 
     return (
         <div>
-            <div className="fw-main-row middle-content" style={{ backgroundColor: 'f1f1f1' }}>
+            <div className="fw-main-row middle-content" style={{ backgroundColor: '#f1f1f1' }}>
                 <img src="/images/left_element.webp" alt="" className="left_element" />
                 <img src="/images/right_element.webp" alt="" className="right_element" />
                 <div className="fw-row sliding-text">
@@ -113,7 +113,7 @@ const OurEminentSolutions = () => {
                         Your Trusted IT partner.
                     </p>
                 </div>
-                <div className="fw-container mb-md-4 mb-3" style={{ overflow: "hidden" }}>
+                <div className="fw-container mb-md-4 mb-3" >
                     <div className="fw-row">
                         <div className="fw-col-xs-12 ">
                             <div className="fw-heading fw-heading-h2">
