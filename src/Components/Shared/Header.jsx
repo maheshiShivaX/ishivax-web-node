@@ -71,12 +71,18 @@ const Header = () => {
                             <div className="menu-box-nav flw">
                                 <div className="menu-box-left">
                                     <div className="logo lg-top">
-                                        <Link to="https://smartqr.ishivax.com/twjacn" target="_blank" rel="noreferrer" aria-label="Ask Nova">
-                                            <div className='nova_logo_weper'>
-                                                <span className="novaHover_only">
+                                        <Link
+                                            to="https://smartqr.ishivax.com/twjacn"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            aria-label="Ask Nova"
+                                            className="ask-nova-link"
+                                        >
+                                            <span className="gemini-wrap">
+                                                <span className="gemini-btn">
                                                     Ask <img src="/images/novaLogo.png" className="nova_logo" alt="" />
                                                 </span>
-                                            </div>
+                                            </span>
                                         </Link>
 
                                         <Link to='/'>
