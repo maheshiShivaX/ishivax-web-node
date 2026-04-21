@@ -63,7 +63,7 @@ const Banner = () => {
     }, [stopOnInteraction]);
 
     const startInfiniteScroll = () => {
-        const speed = isMobile ? 90 : 80;
+        const speed = isMobile ? 100 : 100;
 
         const scrollStep = () => {
             if (!isScrollingRef.current) return;
