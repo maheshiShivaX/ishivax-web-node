@@ -9,7 +9,8 @@ const Banner = () => {
     const playButtonRef = useRef(null);
     const scrollAnimationRef = useRef(null);
     const isScrollingRef = useRef(false);
-    const outsideClickHandlerRef = useRef(null);
+    const lastTapTimeRef = useRef(0);
+    const stopOnInteractionRef = useRef(null);
     const [showSpline, setShowSpline] = React.useState(false);
     const [splineLoaded, setSplineLoaded] = React.useState(false);
 
@@ -21,6 +22,15 @@ const Banner = () => {
 
     // ✅ Device detection
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    const getScrollElement = () => document.scrollingElement || document.documentElement;
+
+    const setPageScrollTop = (top) => {
+        const scrollElement = getScrollElement();
+        scrollElement.scrollTop = top;
+        document.body.scrollTop = top;
+        window.scrollTo(0, top);
+    };
 
     const stopScroll = useCallback(() => {
         isScrollingRef.current = false;
@@ -35,59 +45,74 @@ const Banner = () => {
             audioRef.current.currentTime = 0;
         }
 
-        if (outsideClickHandlerRef.current) {
-            document.removeEventListener('click', outsideClickHandlerRef.current);
-            document.removeEventListener('touchstart', outsideClickHandlerRef.current);
+        if (stopOnInteractionRef.current) {
+            document.removeEventListener('click', stopOnInteractionRef.current);
+            document.removeEventListener('touchstart', stopOnInteractionRef.current);
+            document.removeEventListener('pointerdown', stopOnInteractionRef.current);
         }
+
     }, []);
 
-    const handleOutsideClick = useCallback((e) => {
-        if (!playButtonRef.current || !playButtonRef.current.contains(e.target)) {
-            stopScroll();
-        }
+    const stopOnInteraction = useCallback((e) => {
+        if (playButtonRef.current?.contains(e.target)) return;
+        stopScroll();
     }, [stopScroll]);
 
-    // store handler in ref (break circular deps)
     useEffect(() => {
-        outsideClickHandlerRef.current = handleOutsideClick;
-    }, [handleOutsideClick]);
+        stopOnInteractionRef.current = stopOnInteraction;
+    }, [stopOnInteraction]);
 
-    const scrollToBottomSlow = () => {
-        const speed = isMobile ? 10 : 10;
+    const startInfiniteScroll = () => {
+        const speed = isMobile ? 90 : 80;
 
         const scrollStep = () => {
             if (!isScrollingRef.current) return;
 
-            const maxScroll = document.body.scrollHeight - window.innerHeight;
-            const currentScroll = window.scrollY;
+            const scrollElement = getScrollElement();
+            const maxScroll = scrollElement.scrollHeight - scrollElement.clientHeight;
+            const currentScroll = scrollElement.scrollTop || window.pageYOffset || 0;
 
-            if (currentScroll >= maxScroll) {
-                stopScroll();
+            if (currentScroll >= maxScroll - speed) {
+                setPageScrollTop(0);
+                scrollAnimationRef.current = requestAnimationFrame(scrollStep);
                 return;
             }
 
-            window.scrollTo(0, currentScroll + speed);
+            setPageScrollTop(currentScroll + speed);
             scrollAnimationRef.current = requestAnimationFrame(scrollStep);
         };
 
         scrollAnimationRef.current = requestAnimationFrame(scrollStep);
     };
 
-    const handleClick = async () => {
+    const handleClick = (e) => {
+        e?.preventDefault();
+        e?.stopPropagation();
+
+        const now = Date.now();
+        if (now - lastTapTimeRef.current < 400) return;
+        lastTapTimeRef.current = now;
+
         if (!isScrollingRef.current) {
             isScrollingRef.current = true;
-
-            window.scrollBy(0, 1);
-            await new Promise(r => setTimeout(r, 10));
+            document.documentElement.style.overflowY = 'auto';
+            document.body.style.overflowY = 'auto';
 
             try {
-                await audioRef.current?.play();
+                const playPromise = audioRef.current?.play();
+                playPromise?.catch?.(() => { });
             } catch { }
 
-            scrollToBottomSlow();
+            setPageScrollTop(0);
+            startInfiniteScroll();
 
-            document.addEventListener('click', outsideClickHandlerRef.current);
-            document.addEventListener('touchstart', outsideClickHandlerRef.current);
+            setTimeout(() => {
+                if (!stopOnInteractionRef.current) return;
+
+                document.addEventListener('click', stopOnInteractionRef.current);
+                document.addEventListener('touchstart', stopOnInteractionRef.current, { passive: true });
+                document.addEventListener('pointerdown', stopOnInteractionRef.current);
+            }, 0);
         } else {
             stopScroll();
         }
@@ -335,10 +360,13 @@ const Banner = () => {
 
                         <div className="fw-row" style={{ display: 'flex' }}>
                             <div className="fw-col-xs-12 ">
-                                <div className="frame-69-Hp3"
+                                <button className="frame-69-Hp3"
                                     id="playButton"
+                                    type="button"
                                     ref={playButtonRef}
                                     onClick={handleClick}
+                                    onPointerUp={handleClick}
+                                    onTouchEnd={handleClick}
                                 >
                                     <p className={` ${isLight ? 'scroll-down-Dhh-LIGHT' : 'scroll-down-Dhh'}`}>
                                         Click Here For
@@ -349,9 +377,9 @@ const Banner = () => {
                                             : "/images/ScrollDown.gif"
                                     }
                                         style={{ display: 'block', margin: ' 0 auto' }} alt='' />
-                                </div>
+                                </button>
                             </div>
-                            <audio ref={audioRef} id="audioPlayer" src="/images/audio.mp3" loop></audio>
+                            <audio ref={audioRef} id="audioPlayer" src="/images/audio.mp3" preload="auto" loop></audio>
                         </div>
 
                         <div className="fw-row">
