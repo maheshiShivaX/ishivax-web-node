@@ -57,35 +57,37 @@
     border-radius: 999px;
     padding: 2px;
     background: #4285f4;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, box-shadow 0.3s;
     line-height: normal;
     overflow: hidden;
+    box-shadow: 0 0 12px rgba(66, 133, 244, 0.22);
+    -webkit-clip-path: inset(0 round 999px);
+    clip-path: inset(0 round 999px);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   .gemini-wrap::before {
-    content: '';
+    content: "";
     position: absolute;
-    inset: -3px;
-    border-radius: 999px;
+    inset: -120%;
     background: conic-gradient(
-      from var(--angle, 0deg),
-      #4285f4, #ea4335, #fbbc05, #34a853,
-      #a142f4, #4285f4
+      from 0deg,
+      #4285f4 0deg,
+      #a142f4 62deg,
+      #ea4335 128deg,
+      #fbbc05 190deg,
+      #34a853 252deg,
+      #4285f4 320deg,
+      #4285f4 360deg
     );
-    filter: blur(8px);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: -1;
-  }
-
-  .gemini-wrap::after {
-    content: '';
-    position: absolute;
-    inset: -80%;
-    background: conic-gradient(
-      #4285f4, #ea4335, #fbbc05, #34a853,
-      #a142f4, #4285f4
-    );
+    -webkit-animation: nova-border-spin 2.2s linear infinite;
+    animation: nova-border-spin 2.2s linear infinite;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    will-change: transform;
     z-index: 0;
   }
 
@@ -126,124 +128,26 @@
   .gemini-wrap:hover .gemini-btn {
     background: #222;
   }
-  .gemini-wrap:hover::before {
-    opacity: 0.7;
+
+  .gemini-wrap:hover {
+    box-shadow: 0 0 18px rgba(161, 66, 244, 0.32);
   }
 
-  /* spin only on hover */
-  .gemini-wrap:hover::after {
-    animation: spin-border 2s linear infinite;
-  }
-
-  .gemini-wrap:hover::before {
-    opacity: 0.65;
-  }
-
-  @keyframes spin-border {
+  @-webkit-keyframes nova-border-spin {
     to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes nova-border-spin {
+    to {
+      -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
     }
   }
 
   /* ── Light version ── */
-  .gemini-wrap-light {
-    display: inline-flex;
-    position: relative;
-    border-radius: 999px;
-    padding: 2px;
-    background: #4285f4;
-    transition: background 0.3s;
-    line-height: normal;
-    overflow: hidden;
-  }
-
-  .gemini-wrap-light::before {
-    content: '';
-    position: absolute;
-    inset: -3px;
-    border-radius: 999px;
-    background: conic-gradient(
-      from var(--angle2, 0deg),
-      #4285f4, #ea4335, #fbbc05, #34a853,
-      #a142f4, #4285f4
-    );
-    filter: blur(8px);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: -1;
-  }
-
-  .gemini-wrap-light::after {
-    content: '';
-    position: absolute;
-    inset: -80%;
-    background: conic-gradient(
-      #4285f4, #ea4335, #fbbc05, #34a853,
-      #a142f4, #4285f4
-    );
-    z-index: 0;
-  }
-
-  .gemini-wrap-light:hover {
-    background: #4285f4;
-  }
-
-  .ask-nova-link:hover .gemini-wrap::after,
-  .ask-nova-link:focus-visible .gemini-wrap::after,
-  .ask-nova-link:hover .gemini-wrap-light::after,
-  .ask-nova-link:focus-visible .gemini-wrap-light::after,
-  .gemini-wrap-light:hover::after {
-    animation: spin-border2 2s linear infinite;
-  }
-
-  .ask-nova-link:hover .gemini-wrap-light::before,
-  .ask-nova-link:focus-visible .gemini-wrap-light::before,
-  .gemini-wrap-light:hover::before {
-    opacity: 0.5;
-  }
-
-  @keyframes spin-border2 {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  .gemini-btn-light {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    padding: 10px 20px;
-    background: #f8f9fa;
-    color: #1a1a1a;
-    border: none;
-    border-radius: 999px;
-    font-family: 'Google Sans', 'Segoe UI', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    letter-spacing: 0.01em;
-    white-space: nowrap;
-    outline: none;
-    transition: background 0.2s;
-    position: relative;
-    z-index: 1;
-    min-width: 136px;
-    min-height: 48px;
-    justify-content: center;
-  }
-  .gemini-btn-light .nova_logo {
-    width: 58px;
-    height: auto;
-    flex-shrink: 0;
-    transition: transform 0.5s cubic-bezier(.34,1.56,.64,1);
-  }
-  /* .gemini-wrap-light:hover .nova_logo {
-    transform: rotate(3deg) scale(1.08);
-  } */
-  .gemini-wrap-light:hover .gemini-btn-light {
-    background: #f1f3f4;
-  }
-
 a {
   text-decoration: none !important;
   color: inherit !important;
@@ -38216,8 +38120,7 @@ flag:focus {
 
 
 @media only screen and (max-width: 450px) {
-  .gemini-btn,
-  .gemini-btn-light {
+  .gemini-btn {
     min-width: 96px;
     min-height: 40px;
     padding: 8px 12px;
@@ -38225,8 +38128,7 @@ flag:focus {
     font-size: 13px;
   }
 
-  .gemini-btn .nova_logo,
-  .gemini-btn-light .nova_logo {
+  .gemini-btn .nova_logo {
     width: 42px;
   }
 

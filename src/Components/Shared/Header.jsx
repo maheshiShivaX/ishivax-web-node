@@ -78,8 +78,8 @@ const Header = () => {
                                             aria-label="Ask Nova"
                                             className="ask-nova-link"
                                         >
-                                            <span className={isLight ? "gemini-wrap-light" : "gemini-wrap"}>
-                                                <span className={isLight ? "gemini-btn-light" : "gemini-btn"}>
+                                            <span className="gemini-wrap">
+                                                <span className="gemini-btn">
                                                     Ask <img src="/images/novaLogo.png" className="nova_logo" alt="" />
                                                 </span>
                                             </span>
