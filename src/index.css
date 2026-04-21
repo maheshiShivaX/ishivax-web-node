@@ -72,7 +72,7 @@
   .gemini-wrap::before {
     content: "";
     position: absolute;
-    inset: -120%;
+    inset: 0;
     background: conic-gradient(
       from 0deg,
       #4285f4 0deg,
@@ -32282,12 +32282,12 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 
 .card-text-AA1,
 .frame-8056-aHD {
-  opacity: 0;
-  visibility: hidden;
+  /* opacity: 0;
+  visibility: hidden; */
   transition: opacity .4s ease-in, visibility .4s ease-in;
 }
 
-.frame-7-XAX:hover .card-text-AA1,
+/* .frame-7-XAX:hover .card-text-AA1, */
 .frame-7-XAX:hover .frame-8056-aHD,
 .frame-8-XAX:hover .card-text-AA1,
 .frame-8-XAX:hover .frame-8056-aHD,
@@ -32519,9 +32519,16 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 
 
 .frame-69-Hp3 {
-
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  display: block;
   margin-top: 40px;
-
+  padding: 0;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 }
 
 .scroll-down-Dhh {
@@ -34334,8 +34341,8 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
     font-size: 14px;
     line-height: 15px;
     margin-bottom: 0.5rem;
-    opacity: 1;
-    visibility: visible;
+    /* opacity: 1;
+    visibility: visible; */
   }
 
 
@@ -38192,7 +38199,16 @@ flag:focus {
     margin-top: -80px;
   }
 }
-@charset "UTF-8";
+
+@media (hover: none) and (pointer: coarse) {
+  .gemini-wrap::before {
+    -webkit-animation: none !important;
+    animation: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+  }
+}
+/* @charset "UTF-8"; */
 /**============================================================
 * Theme Name: Topseo
 * Version: 2.2
@@ -38266,7 +38282,7 @@ flag:focus {
   .gemini-wrap::before {
     content: "";
     position: absolute;
-    inset: -120%;
+    inset: 0;
     background: conic-gradient(
       from 0deg,
       #4285f4 0deg,
@@ -70470,12 +70486,12 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 
 .card-text-AA1,
 .frame-8056-aHD {
-  opacity: 0;
-  visibility: hidden;
+  /* opacity: 0;
+  visibility: hidden; */
   transition: opacity .4s ease-in, visibility .4s ease-in;
 }
 
-.frame-7-XAX:hover .card-text-AA1,
+/* .frame-7-XAX:hover .card-text-AA1, */
 .frame-7-XAX:hover .frame-8056-aHD,
 .frame-8-XAX:hover .card-text-AA1,
 .frame-8-XAX:hover .frame-8056-aHD,
@@ -70707,9 +70723,16 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 
 
 .frame-69-Hp3 {
-
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  display: block;
   margin-top: 40px;
-
+  padding: 0;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 }
 
 .scroll-down-Dhh {
@@ -72522,8 +72545,8 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
     font-size: 14px;
     line-height: 15px;
     margin-bottom: 0.5rem;
-    opacity: 1;
-    visibility: visible;
+    /* opacity: 1;
+    visibility: visible; */
   }
 
 
