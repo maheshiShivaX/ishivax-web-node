@@ -146,7 +146,7 @@ const OurEminentSolutions = () => {
 
                         {data?.length > 0 && data?.map((item, i) => (
                             <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12 hover_inAll mb-lg-auto mb-4" key={i}>
-                                <Link to="/service-mobile-app" style={{ position: "relative" }}>
+                                <Link to="/service-mobile-app" >
                                     <div className="frame-7-XAX">
                                         <p className="mobile-app-development-2sy">{item?.title}</p>
                                         <div>
