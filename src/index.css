@@ -41,6 +41,209 @@
 /* I. FRAMEWORK
 ***********************/
 
+
+  /* ── Gemini-style rotating conic gradient border ── */
+  .ask-nova-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+    flex: 0 0 auto;
+  }
+
+  .gemini-wrap {
+    display: inline-flex;
+    position: relative;
+    border-radius: 999px;
+    padding: 2px;
+    background: #4285f4;
+    transition: opacity 0.3s;
+    line-height: normal;
+    overflow: hidden;
+  }
+
+  .gemini-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 999px;
+    background: conic-gradient(
+      from var(--angle, 0deg),
+      #4285f4, #ea4335, #fbbc05, #34a853,
+      #a142f4, #4285f4
+    );
+    filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+  }
+
+  .gemini-wrap::after {
+    content: '';
+    position: absolute;
+    inset: -80%;
+    background: conic-gradient(
+      #4285f4, #ea4335, #fbbc05, #34a853,
+      #a142f4, #4285f4
+    );
+    z-index: 0;
+  }
+
+  .gemini-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 20px;
+    background: #1a1a1a;
+    color: #e8eaed;
+    border: none;
+    border-radius: 999px;
+    font-family: 'Google Sans', 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    transition: background 0.2s;
+    white-space: nowrap;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    min-width: 136px;
+    min-height: 48px;
+    justify-content: center;
+  }
+
+  .gemini-btn .nova_logo {
+    width: 58px;
+    height: auto;
+    flex-shrink: 0;
+    transition: transform 0.5s cubic-bezier(.34,1.56,.64,1);
+  }
+
+  /* .gemini-wrap:hover .nova_logo {
+    transform: rotate(3deg) scale(1.08);
+  } */
+  .gemini-wrap:hover .gemini-btn {
+    background: #222;
+  }
+  .gemini-wrap:hover::before {
+    opacity: 0.7;
+  }
+
+  /* spin only on hover */
+  .gemini-wrap:hover::after {
+    animation: spin-border 2s linear infinite;
+  }
+
+  .gemini-wrap:hover::before {
+    opacity: 0.65;
+  }
+
+  @keyframes spin-border {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* ── Light version ── */
+  .gemini-wrap-light {
+    display: inline-flex;
+    position: relative;
+    border-radius: 999px;
+    padding: 2px;
+    background: #4285f4;
+    transition: background 0.3s;
+    line-height: normal;
+    overflow: hidden;
+  }
+
+  .gemini-wrap-light::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 999px;
+    background: conic-gradient(
+      from var(--angle2, 0deg),
+      #4285f4, #ea4335, #fbbc05, #34a853,
+      #a142f4, #4285f4
+    );
+    filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+  }
+
+  .gemini-wrap-light::after {
+    content: '';
+    position: absolute;
+    inset: -80%;
+    background: conic-gradient(
+      #4285f4, #ea4335, #fbbc05, #34a853,
+      #a142f4, #4285f4
+    );
+    z-index: 0;
+  }
+
+  .gemini-wrap-light:hover {
+    background: #4285f4;
+  }
+
+  .ask-nova-link:hover .gemini-wrap::after,
+  .ask-nova-link:focus-visible .gemini-wrap::after,
+  .ask-nova-link:hover .gemini-wrap-light::after,
+  .ask-nova-link:focus-visible .gemini-wrap-light::after,
+  .gemini-wrap-light:hover::after {
+    animation: spin-border2 2s linear infinite;
+  }
+
+  .ask-nova-link:hover .gemini-wrap-light::before,
+  .ask-nova-link:focus-visible .gemini-wrap-light::before,
+  .gemini-wrap-light:hover::before {
+    opacity: 0.5;
+  }
+
+  @keyframes spin-border2 {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .gemini-btn-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 20px;
+    background: #f8f9fa;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 999px;
+    font-family: 'Google Sans', 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    outline: none;
+    transition: background 0.2s;
+    position: relative;
+    z-index: 1;
+    min-width: 136px;
+    min-height: 48px;
+    justify-content: center;
+  }
+  .gemini-btn-light .nova_logo {
+    width: 58px;
+    height: auto;
+    flex-shrink: 0;
+    transition: transform 0.5s cubic-bezier(.34,1.56,.64,1);
+  }
+  /* .gemini-wrap-light:hover .nova_logo {
+    transform: rotate(3deg) scale(1.08);
+  } */
+  .gemini-wrap-light:hover .gemini-btn-light {
+    background: #f1f3f4;
+  }
+
 a {
   text-decoration: none !important;
   color: inherit !important;
@@ -2013,10 +2216,10 @@ h6 {
 
 p {
   line-height: 24px;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
+  /* -webkit-margin-before: 0;
+  -webkit-margin-after: 0; */
   margin: 0 0 5px;
-  word-break: break-word;
+  /* word-break: break-word; */
 }
 
 li ul,
@@ -38013,6 +38216,20 @@ flag:focus {
 
 
 @media only screen and (max-width: 450px) {
+  .gemini-btn,
+  .gemini-btn-light {
+    min-width: 96px;
+    min-height: 40px;
+    padding: 8px 12px;
+    gap: 6px;
+    font-size: 13px;
+  }
+
+  .gemini-btn .nova_logo,
+  .gemini-btn-light .nova_logo {
+    width: 42px;
+  }
+
   .nova_logo_weper span {
     height: 40px;
     padding: 0;
