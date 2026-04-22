@@ -142,24 +142,25 @@ const OurEminentSolutions = () => {
                             <div className="fw-divider-space" style={{ marginTop: '60px' }}></div>
                         </div>
                     </div>
-                    <div className="row card-container">
-
-                        {data?.length > 0 && data?.map((item, i) => (
-                            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12 hover_inAll mb-lg-auto mb-4" key={i}>
-                                <Link to="/service-mobile-app" >
-                                    <div className="frame-7-XAX">
-                                        <p className="mobile-app-development-2sy">{item?.title}</p>
-                                        <div>
-                                            <p className="card-text-AA1">{item?.description}</p>
+                    <div className="d-flex justify-content-center">
+                        <div className="row card-container w-100 justify-content-center">
+                            {data?.length > 0 && data?.map((item, i) => (
+                                <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12 hover_inAll mb-lg-auto mb-4 px-sm-2 px-0" key={i}>
+                                    <Link to="/service-mobile-app" >
+                                        <div className="frame-7-XAX">
+                                            <p className="mobile-app-development-2sy">{item?.title}</p>
+                                            <div>
+                                                <p className="card-text-AA1">{item?.description}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="frame-7-XAX-img">
-                                        <img  src={isLight ? item.lightPath : item.darkPath} alt="" className="w-100" />
-                                    </div>
-                                </Link>
-                            </div>
-                        ))}
-                    </div >
+                                        <div className="frame-7-XAX-img">
+                                            <img src={isLight ? item.lightPath : item.darkPath} alt="" className="w-100" />
+                                        </div>
+                                    </Link>
+                                </div>
+                            ))}
+                        </div >
+                    </div>
                 </div >
                 <Overview overviewData={overviewData} />
             </div >

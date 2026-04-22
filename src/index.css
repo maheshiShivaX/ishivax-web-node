@@ -71826,7 +71826,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 
 .p-sliding-text-black {
   display: inline-block;
-  animation: slideText 40s linear infinite;
+  animation: slideText 80s linear infinite;
   text-transform: uppercase;
   font-family: Syne;
   font-size: 84px;
