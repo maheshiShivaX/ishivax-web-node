@@ -53,7 +53,8 @@ const Banner = () => {
     }, [handleOutsideClick]);
 
     const scrollToBottomSlow = () => {
-        const speed = isMobile ? 10 : 10;
+        // const speed = isMobile ? 100 : 10;
+         const speed = /iPhone/i.test(navigator.userAgent) ? 3 : isMobile ? 10 : 50;
 
         const scrollStep = () => {
             if (!isScrollingRef.current) return;
