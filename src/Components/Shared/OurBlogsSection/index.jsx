@@ -178,7 +178,6 @@ const OurBlogsSection = () => {
                     <img src="./images/companies/24.png" className="client-logo" alt="" />
                     <img src="./images/companies/25.png" className="client-logo" alt="" />
                     <img src="./images/companies/31.png" className="client-logo" alt="" />
-                    <img src="./images/companies/32.png" className="client-logo" alt="" />
                 </div>
             </div>
 
