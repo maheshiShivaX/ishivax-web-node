@@ -20,7 +20,7 @@ const Banner = () => {
 
 
     // ✅ Device detection
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const isMobile = /iPhone|iPad|iPod|Android|Linux/i.test(navigator.userAgent);
 
     const stopScroll = useCallback(() => {
         isScrollingRef.current = false;
@@ -53,7 +53,8 @@ const Banner = () => {
     }, [handleOutsideClick]);
 
     const scrollToBottomSlow = () => {
-        const speed = isMobile ? 10 : 10;
+        // const speed = isMobile ? 100 : 10;
+        const speed = /iPhone/i.test(navigator.userAgent) ? 5 : isMobile ? 60 : 80;
 
         const scrollStep = () => {
             if (!isScrollingRef.current) return;

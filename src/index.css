@@ -33588,7 +33588,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   margin-top: 30px;
   margin-bottom: 60px;
   display: inline-block;
-  animation: slideText 40s linear infinite;
+  animation: slideText 60s linear infinite;
   text-transform: uppercase;
   font-family: Syne;
   font-size: 84px;
@@ -33601,7 +33601,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 
 .p-sliding-text-black {
   display: inline-block;
-  animation: slideText 40s linear infinite;
+  animation: slideText 80s linear infinite;
   text-transform: uppercase;
   font-family: Syne;
   font-size: 84px;
@@ -33612,13 +33612,9 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   color: rgba(72, 75, 95, 1);
 }
 
-
-
-
 .tech-part-AA2 {
   text-align: center;
 }
-
 
 .portfolio-content-title {
   font-family: Manrope;
@@ -34067,6 +34063,13 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   animation: loop 15s linear infinite;
 }
 
+/* Desktop and Android - slower speed */
+@media only screen and (min-width: 431px) {
+  .client-track {
+    animation: loop 20s linear infinite; /* Slower for desktop/Android */
+  }
+}
+
 .client-logo {
   max-height: 80px;
   margin-right: 50px;
@@ -34084,6 +34087,36 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   }
 }
 
+/* iPhone specific optimizations */
+@media only screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) {
+  .client-slider {
+    padding: 15px 0;
+  }
+  
+  .client-track {
+    animation: loop 6s linear infinite; /* Much faster for iPhone */
+  }
+  
+  .client-logo {
+    max-height: 45px;
+    margin-right: 20px;
+    width: 100px;
+  }
+  
+  .p-sliding-text {
+    font-size: 36px; /* Smaller font for iPhone */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .p-sliding-text-black {
+    font-size: 36px; /* Smaller font for iPhone */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 
 @media only screen and (max-width: 330px) {
 
@@ -71766,39 +71799,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 /* footer css ends */
 
 
-.sliding-text {
-  white-space: nowrap;
-  overflow: hidden;
-  position: relative;
-}
 
-.p-sliding-text {
-  margin-top: 30px;
-  margin-bottom: 60px;
-  display: inline-block;
-  animation: slideText 40s linear infinite;
-  text-transform: uppercase;
-  font-family: Syne;
-  font-size: 84px;
-  font-weight: 800;
-  line-height: 101px;
-  letter-spacing: -0.01em;
-  text-align: center;
-  color: rgba(5, 6, 16, 1);
-}
-
-.p-sliding-text-black {
-  display: inline-block;
-  animation: slideText 40s linear infinite;
-  text-transform: uppercase;
-  font-family: Syne;
-  font-size: 84px;
-  font-weight: 800;
-  line-height: 101px;
-  letter-spacing: -0.01em;
-  text-align: center;
-  color: rgba(72, 75, 95, 1);
-}
 
 
 
@@ -72255,6 +72256,13 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   animation: loop 15s linear infinite;
 }
 
+/* Desktop and Android - slower speed */
+@media only screen and (min-width: 431px) {
+  .client-track {
+    animation: loop 20s linear infinite; /* Slower for desktop/Android */
+  }
+}
+
 .client-logo {
   max-height: 80px;
   margin-right: 50px;
@@ -72272,6 +72280,36 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   }
 }
 
+/* iPhone specific optimizations */
+@media only screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) {
+  .client-slider {
+    padding: 15px 0;
+  }
+  
+  .client-track {
+    animation: loop 6s linear infinite; /* Much faster for iPhone */
+  }
+  
+  .client-logo {
+    max-height: 45px;
+    margin-right: 20px;
+    width: 100px;
+  }
+  
+  .p-sliding-text {
+    font-size: 36px; /* Smaller font for iPhone */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .p-sliding-text-black {
+    font-size: 36px; /* Smaller font for iPhone */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 
 @media only screen and (max-width: 330px) {
 

@@ -78,9 +78,23 @@ const OurBlogsSection = () => {
     };
 
     useEffect(() => {
-        const track = document?.getElementById("clientTrack");
-        const clone = track?.innerHTML;
-        track.innerHTML += clone;
+        const createSeamlessLoop = () => {
+            const track = document?.getElementById("clientTrack");
+            if (track && track.children.length > 0) {
+                // Get original content
+                const originalContent = track.innerHTML;
+                // Duplicate content 2 times for seamless infinite loop (optimal for iPhone)
+                track.innerHTML = originalContent + originalContent;
+            }
+        };
+        
+        // Ensure DOM is fully loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', createSeamlessLoop);
+        } else {
+            // Small delay to ensure all images are loaded
+            setTimeout(createSeamlessLoop, 100);
+        }
     }, []);
 
     return (
@@ -156,19 +170,14 @@ const OurBlogsSection = () => {
             </div>
             <div className="client-slider">
                 <div className="client-track" id="clientTrack">
-                    {/* <img src="./images/Anutechlogo.png" className="client-logo" alt="" /> */}
-                    {/* <img src="./images/RHB.png" className="client-logo" alt="" /> */}
+                    <img src="./images/companies/32.png" className="client-logo" alt="" />
                     <img src="./images/SuperSinger+.webp" className="client-logo" alt="" />
-                    {/* <img src="./images/Aagaman.png" className="client-logo" alt="" /> */}
-                    {/* <img src="./images/1st India.png" className="client-logo" alt="" /> */}
-                    {/* <img src="./images/DARA Thermoplast.png" className="client-logo" alt="" /> */}
                     <img src="./images/companies/12.png" className="client-logo" alt="" />
                     <img src="./images/companies/13.png" className="client-logo" alt="" />
                     <img src="./images/companies/22.png" className="client-logo" alt="" />
                     <img src="./images/companies/24.png" className="client-logo" alt="" />
                     <img src="./images/companies/25.png" className="client-logo" alt="" />
                     <img src="./images/companies/31.png" className="client-logo" alt="" />
-                    <img src="./images/companies/32.png" className="client-logo" alt="" />
                 </div>
             </div>
 
