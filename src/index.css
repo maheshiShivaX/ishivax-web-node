@@ -34067,6 +34067,13 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   animation: loop 15s linear infinite;
 }
 
+/* Desktop and Android - slower speed */
+@media only screen and (min-width: 431px) {
+  .client-track {
+    animation: loop 20s linear infinite; /* Slower for desktop/Android */
+  }
+}
+
 .client-logo {
   max-height: 80px;
   margin-right: 50px;
@@ -34095,9 +34102,9 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   }
   
   .client-logo {
-    max-height: 60px;
-    margin-right: 30px;
-    width: 140px;
+    max-height: 45px;
+    margin-right: 20px;
+    width: 100px;
   }
 }
 
@@ -72271,6 +72278,13 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   animation: loop 15s linear infinite;
 }
 
+/* Desktop and Android - slower speed */
+@media only screen and (min-width: 431px) {
+  .client-track {
+    animation: loop 20s linear infinite; /* Slower for desktop/Android */
+  }
+}
+
 .client-logo {
   max-height: 80px;
   margin-right: 50px;
@@ -72299,9 +72313,9 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   }
   
   .client-logo {
-    max-height: 60px;
-    margin-right: 30px;
-    width: 140px;
+    max-height: 45px;
+    margin-right: 20px;
+    width: 100px;
   }
 }
 

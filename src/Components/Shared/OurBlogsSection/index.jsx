@@ -78,20 +78,22 @@ const OurBlogsSection = () => {
     };
 
     useEffect(() => {
-        const duplicateContent = () => {
+        const createSeamlessLoop = () => {
             const track = document?.getElementById("clientTrack");
             if (track && track.children.length > 0) {
-                const clone = track.innerHTML;
-                track.innerHTML += clone;
+                // Get original content
+                const originalContent = track.innerHTML;
+                // Duplicate content 2 times for seamless infinite loop (optimal for iPhone)
+                track.innerHTML = originalContent + originalContent;
             }
         };
         
         // Ensure DOM is fully loaded
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', duplicateContent);
+            document.addEventListener('DOMContentLoaded', createSeamlessLoop);
         } else {
             // Small delay to ensure all images are loaded
-            setTimeout(duplicateContent, 100);
+            setTimeout(createSeamlessLoop, 100);
         }
     }, []);
 
