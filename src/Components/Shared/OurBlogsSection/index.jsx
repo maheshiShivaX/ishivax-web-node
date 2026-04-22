@@ -170,6 +170,7 @@ const OurBlogsSection = () => {
             </div>
             <div className="client-slider">
                 <div className="client-track" id="clientTrack">
+                    <img src="./images/companies/32.png" className="client-logo" alt="" />
                     <img src="./images/SuperSinger+.webp" className="client-logo" alt="" />
                     <img src="./images/companies/12.png" className="client-logo" alt="" />
                     <img src="./images/companies/13.png" className="client-logo" alt="" />

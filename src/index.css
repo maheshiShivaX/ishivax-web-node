@@ -34106,6 +34106,20 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
     margin-right: 20px;
     width: 100px;
   }
+  
+  .p-sliding-text {
+    font-size: 36px; /* Smaller font for iPhone */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .p-sliding-text-black {
+    font-size: 36px; /* Smaller font for iPhone */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 @media only screen and (max-width: 330px) {
@@ -72316,6 +72330,20 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
     max-height: 45px;
     margin-right: 20px;
     width: 100px;
+  }
+  
+  .p-sliding-text {
+    font-size: 36px; /* Smaller font for iPhone */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .p-sliding-text-black {
+    font-size: 36px; /* Smaller font for iPhone */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
