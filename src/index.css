@@ -33588,7 +33588,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   margin-top: 30px;
   margin-bottom: 60px;
   display: inline-block;
-  animation: slideText 40s linear infinite;
+  animation: slideText 60s linear infinite;
   text-transform: uppercase;
   font-family: Syne;
   font-size: 84px;
@@ -33601,7 +33601,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 
 .p-sliding-text-black {
   display: inline-block;
-  animation: slideText 40s linear infinite;
+  animation: slideText 80s linear infinite;
   text-transform: uppercase;
   font-family: Syne;
   font-size: 84px;
@@ -33612,13 +33612,9 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   color: rgba(72, 75, 95, 1);
 }
 
-
-
-
 .tech-part-AA2 {
   text-align: center;
 }
-
 
 .portfolio-content-title {
   font-family: Manrope;
@@ -71803,39 +71799,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 /* footer css ends */
 
 
-.sliding-text {
-  white-space: nowrap;
-  overflow: hidden;
-  position: relative;
-}
 
-.p-sliding-text {
-  margin-top: 30px;
-  margin-bottom: 60px;
-  display: inline-block;
-  animation: slideText 40s linear infinite;
-  text-transform: uppercase;
-  font-family: Syne;
-  font-size: 84px;
-  font-weight: 800;
-  line-height: 101px;
-  letter-spacing: -0.01em;
-  text-align: center;
-  color: rgba(5, 6, 16, 1);
-}
-
-.p-sliding-text-black {
-  display: inline-block;
-  animation: slideText 80s linear infinite;
-  text-transform: uppercase;
-  font-family: Syne;
-  font-size: 84px;
-  font-weight: 800;
-  line-height: 101px;
-  letter-spacing: -0.01em;
-  text-align: center;
-  color: rgba(72, 75, 95, 1);
-}
 
 
 
