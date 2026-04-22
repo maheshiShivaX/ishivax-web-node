@@ -34084,6 +34084,22 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   }
 }
 
+/* iPhone specific optimizations */
+@media only screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) {
+  .client-slider {
+    padding: 15px 0;
+  }
+  
+  .client-track {
+    animation: loop 6s linear infinite; /* Much faster for iPhone */
+  }
+  
+  .client-logo {
+    max-height: 60px;
+    margin-right: 30px;
+    width: 140px;
+  }
+}
 
 @media only screen and (max-width: 330px) {
 
@@ -72272,6 +72288,22 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   }
 }
 
+/* iPhone specific optimizations */
+@media only screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) {
+  .client-slider {
+    padding: 15px 0;
+  }
+  
+  .client-track {
+    animation: loop 6s linear infinite; /* Much faster for iPhone */
+  }
+  
+  .client-logo {
+    max-height: 60px;
+    margin-right: 30px;
+    width: 140px;
+  }
+}
 
 @media only screen and (max-width: 330px) {
 
