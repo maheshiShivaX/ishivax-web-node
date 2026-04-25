@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../ComponentsCss/MyTextPrinting.css';
+import { Link } from 'react-router-dom';
 // import CircularSlider from '../Shared/CircularSlider';
 
 const MyTextPrinting = (props) => {
@@ -43,11 +44,13 @@ const MyTextPrinting = (props) => {
                                 <img style={{ width: "80%" }} src='/images/ModelSection/modelcircle.webp' alt='' />
                             </div>
                         </div>
-                        <img style={{ width: "50%" }} src='/images/ModelSection/Model.webp' alt='' className='model-boy-image' />
+                        <Link to='https://ishivax.com/3d/'>
+                            <img style={{ width: "50%" }} src='/images/ModelSection/Model.webp' alt='' className='model-boy-image' />
+                        </Link>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
