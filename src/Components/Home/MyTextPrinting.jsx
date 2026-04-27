@@ -44,9 +44,13 @@ const MyTextPrinting = (props) => {
                                 <img style={{ width: "80%" }} src='/images/ModelSection/modelcircle.webp' alt='' />
                             </div>
                         </div>
-                        <Link to='https://ishivax.com/3d/'>
+                        <a
+                            href="https://ishivax.com/3d/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <img style={{ width: "50%" }} src='/images/ModelSection/Model.webp' alt='' className='model-boy-image' />
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>
