@@ -65,8 +65,8 @@ const OurBlogsSection = () => {
         fetchBlogDetailAll();
     }, []);
 
-    const handleModalToggle = (id) => {
-        navigate(`/blog/${id}`)
+    const handleModalToggle = (slug) => {
+        navigate(`/blog/${slug}`)
     };
 
     const filteredBlogs = selectedBlogType
@@ -136,7 +136,7 @@ const OurBlogsSection = () => {
                             <div className='our_blog_card_inner row'>
                                 {filteredBlogs?.length > 0 && filteredBlogs?.map((blog, index) => (
                                     <React.Fragment key={index}>
-                                        <div className='our_blog_card_image col-lg-4 col-md-6 col-sm-12 mb-sm-4 mb-5' onClick={() => handleModalToggle(blog?.blogId)} style={{ cursor: "pointer" }}>
+                                        <div className='our_blog_card_image col-lg-4 col-md-6 col-sm-12 mb-sm-4 mb-5' onClick={() => handleModalToggle(blog?.blogSlug)} style={{ cursor: "pointer" }}>
                                             <div className='' key={index}>
                                                 <div className='our_blog_card_image_container'>
                                                     <img src={`${blog?.blogImage}`} alt='blog' />

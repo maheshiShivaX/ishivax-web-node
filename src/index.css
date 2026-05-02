@@ -32444,7 +32444,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
 .fw-full-container-top {
   position: relative;
   z-index: 1;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .header-main-content {
@@ -70659,13 +70659,6 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   position: relative;
   z-index: 1;
   /* Ensure the image is above the content */
-}
-
-
-.fw-full-container-top {
-  position: relative;
-  z-index: 1;
-  overflow: auto;
 }
 
 .header-main-content {
